@@ -1,6 +1,4 @@
-package TeamProject;
-
-
+package Monster;
 
 public class Monster {
 

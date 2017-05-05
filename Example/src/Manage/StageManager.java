@@ -1,4 +1,4 @@
-package TeamProject;
+package Manage;
 
 
 
@@ -7,6 +7,14 @@ public class StageManager {
 	private int picked;
 	
 	
+	public int getPicked() {
+		return picked;
+	}
+
+	public void setPicked(int picked) {
+		this.picked = picked;
+	}
+
 	public boolean isCleared()
 	{
 		return true; // 빈 메소드라 return true 해두었습니다.

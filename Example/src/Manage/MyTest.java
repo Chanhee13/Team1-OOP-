@@ -1,9 +1,7 @@
-package TeamProject;
+package Manage;
 
-
-
-import java.io.File;
-import java.io.IOException;
+import TeamProject.*;
+import Dr.Dr_T;
 
 public class MyTest {
 	
@@ -30,12 +28,16 @@ public class MyTest {
 		System.out.println("Test Name : "+u.getHero().getName());
 		if(u.getHero().isGender()==true)
 		{
-			System.out.println("Gender is male");
+			System.out.println("Gender is Female");
 		}
 		else
-			System.out.println("Gender is Female");
+			System.out.println("Gender is Male");
 		
 		//------------------------------ User and Hero Composed Test
+		Dr_T t = new Dr_T();
+		t.setToTeach();
+		System.out.println(t.GetToTeach());
+		System.out.println(t.Celebrate());
 		
 	}
 }

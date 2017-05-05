@@ -1,15 +1,15 @@
-package TeamProject;
-
-
+package Manage;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import TeamProject.*;
+
 public class FileManager{
 	
 	File[] file= new File[3];
-	User user;
+	User user = new User();
 	ArrayList<File> f = new ArrayList<File>();
 	
 	public void CreateFile() // 만드는건 void라 판단한거 같아서 일단 void로 해두었어요.
@@ -28,13 +28,20 @@ public class FileManager{
 		}
 	}
 	
-	public String MakeID()
+	public void MakeID(String ID)
 	{
 		
-		return user.getID();
 	}
 	
 	public User makeUser(){
+		
+		User user = new User();
+		//나중에는 Scanner나 GUI의 함수로 값을 받아오겠지만
+		//지금은 그냥 직접 값을 넣도록 한다.
+		user.setID("temp");
+		user.setHero(new Hero());
+		boolean[] cleard = {true, false, false, false, false, false, false, false};
+		user.setCleared(cleard);
 		
 		return user;
 	}

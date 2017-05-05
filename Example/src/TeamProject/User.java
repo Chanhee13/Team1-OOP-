@@ -8,14 +8,6 @@ public class User {
 	Hero hero;
 	private boolean[] cleared; 
 	
-	
-	public Hero MakeHero()
-	{
-		return hero; // 아직 정해져있지 않아 return hero 해두었습니다.
-	}
-	
-	//------------ getter & setter 부분 구체적으로는 정하지 않았습니다.
-	
 	public String getID() {
 		return ID;
 	}

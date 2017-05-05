@@ -1,6 +1,6 @@
-package TeamProject;
+package game;
 
-
+import Monster.Monster;
 
 public class Stage {
 	
