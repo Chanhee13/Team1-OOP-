@@ -2,7 +2,7 @@ package TeamProject;
 
 
 
-// ì•„ì´í…œ í´ë˜ìŠ¤ëŠ” Composed ë¶€ë¶„ì´ ìˆì–´ì„œ ë¯¸ë¦¬ ë§Œë“¤ì–´ë‘ì—ˆìŠµë‹ˆë‹¤.
+// item Class ´Â Composed ºÎºĞÀÌ ÀÖ¾î¼­ Á¦°¡ ¹Ì¸® ¸¸µé¾îµÎ¾ú½À´Ï´Ù.(Æíµ¿Çõ)
 
 public class Item {
 	
@@ -11,14 +11,14 @@ public class Item {
 	private int healAmount;
 	private boolean available;
 	
-	//------------ getter & setterë¥¼ ì–´ë–»ê²Œ ì§€ì •í• ì§€ ëª°ë¼ì„œ ì¼ë‹¨ ëª¨ë‘ ë§Œë“¤ì–´ ë‘ì—ˆìŠµë‹ˆë‹¤.
+	//------------ getter & setter´Â ÀÏ´Ü ÀÌ·¸°Ô Á¤ÇØµÎ¾ú½À´Ï´Ù.
 	
 	public String getName() {
 		return Name;
 	}
 
 	public void setName(String name) {
-		if(name!=null)
+		if(name!=null&&name!="")
 		Name = name;
 	}
 
@@ -49,7 +49,7 @@ public class Item {
 	}
 
 	public void Beused(){
-		// Empty Method(ë¹ˆ ë©”ì†Œë“œ)
+		// Empty Method(ºó ¸Ş¼Òµå)
 	}
 
 
