@@ -1,4 +1,6 @@
-package PyeonDongHyuk_Part;
+package TeamProject;
+
+
 
 // 아이템 클래스는 상속 부분도 있어서 일단 미리 제가 만들어두었습니다.
 
