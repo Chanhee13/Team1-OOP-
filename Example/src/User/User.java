@@ -1,6 +1,4 @@
-package TeamProject;
-
-
+package User;
 
 public class User {
 	

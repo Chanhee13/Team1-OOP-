@@ -1,6 +1,8 @@
 package Manage;
 
 import TeamProject.*;
+import User.Hero;
+import User.User;
 import Dr.Dr_T;
 
 public class MyTest {

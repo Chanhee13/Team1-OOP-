@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import TeamProject.*;
+import User.Hero;
+import User.User;
 
 public class FileManager{
 	

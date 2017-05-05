@@ -1,6 +1,6 @@
-package TeamProject;
+package User;
 
-
+import game.Item;
 
 public class Hero {
 	
