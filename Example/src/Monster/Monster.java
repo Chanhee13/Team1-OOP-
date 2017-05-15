@@ -1,10 +1,12 @@
 package Monster;
+import Information.*;
+import java.util.*;
 
-public class Monster {
+public abstract class Monster {
 	private String name;
 	private int HP;
 	private int damage;
-	private Arraylist<Assignment> assignment = new Arraylist<Assignment>
+	private ArrayList<Assignment> assignment = new Arraylist<Assignment> ();
 	
 	public String getname() {
 		return name;
@@ -55,9 +57,12 @@ public class Monster {
 		}
 	}
 	
-	public void die() {
-		if(/*Hero °´Ã¼ÀÇ HP == 0*/) {
-			/*Á×À½*/
+	public boolean isDead() {
+		if( this.getHP() <= 0) {
+			return true;
+		}
+		else {
+			return false;
 		}
 	}
 }
