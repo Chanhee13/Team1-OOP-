@@ -12,7 +12,7 @@ public class Information {
 		ID = "This is Information's ID";
 		toTeach = "To teach something to do with stage "+stage;
 		assingment.add(new OXAssignment(stage,0));
-		assingment.add(new selectAssignment(stage,1));
+		assingment.add(new SelectAssignment(stage,1));
 		assingment.add(new TypeAssignment(stage,2));
 	}
 	public String getID() {

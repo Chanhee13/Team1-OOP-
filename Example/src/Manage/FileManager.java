@@ -4,15 +4,14 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import TeamProject.*;
 import User.Hero;
 import User.User;
 
 public class FileManager{
 	
-	File[] file= new File[3];
-	User user = new User();
-	ArrayList<File> f = new ArrayList<File>();
+	private File[] file= new File[3];
+	private User user = new User();
+	private ArrayList<File> f = new ArrayList<File>();
 	
 	public void CreateFile() // 만드는건 void라 판단한거 같아서 일단 void로 해두었어요.
 	{

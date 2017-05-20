@@ -3,8 +3,10 @@ package User;
 public class User {
 	
 	private String ID;
+
 	Hero hero;
 	private boolean[] cleared={true,true,false,false,false,false}; 
+
 	
 	public String getID() {
 		return ID;

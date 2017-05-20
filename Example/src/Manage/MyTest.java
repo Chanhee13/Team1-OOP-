@@ -1,6 +1,5 @@
 package Manage;
 
-import TeamProject.*;
 import User.Hero;
 import User.User;
 
