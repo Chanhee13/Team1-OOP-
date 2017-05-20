@@ -7,9 +7,9 @@ public class selectAssignment extends Assignment{
 	selectAssignment(int stage, int num){
 		setProblem("This is problem "+num+" at stage "+stage);
 		solution = "solution";
-		wrong[0]="wrong1";
-		wrong[1]="wrong2";
-		wrong[2]="wrong3";
+		wrong[0]="wrong0";
+		wrong[1]="wrong1";
+		wrong[2]="wrong2";
 		
 	}
 	
