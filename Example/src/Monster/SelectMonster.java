@@ -1,7 +1,9 @@
 package Monster;
 
 public class SelectMonster extends Monster{
-	public void askProblem() {
+	
+	@Override
+	public void askProblem(){
 		
 	}
 	

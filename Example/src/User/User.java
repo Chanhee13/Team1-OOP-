@@ -3,7 +3,7 @@ package User;
 public class User {
 	
 	private String ID;
-	Hero hero;
+	private Hero hero;
 	private boolean[] cleared; 
 	
 	public String getID() {

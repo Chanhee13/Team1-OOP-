@@ -1,6 +1,7 @@
 package Information;
 
 public class OXAssignment extends Assignment {
+	
 	private boolean solution;
 	
 	OXAssignment(int stage, int num){
