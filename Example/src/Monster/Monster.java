@@ -8,11 +8,11 @@ public abstract class Monster {
 	private int damage;
 	private ArrayList<Assignment> assignment = new Arraylist<Assignment> ();
 	
-	public String getname() {
+	public String getName() {
 		return name;
 	}
 	
-	public void setname(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 	
@@ -24,11 +24,11 @@ public abstract class Monster {
 		this.HP = HP;
 	}
 	
-	public int getdamage() {
+	public int getDamage() {
 		return damage;
 	}
 	
-	public void setdamage(int damage) {
+	public void setDamage(int damage) {
 		this.damage = damage;
 	}
 	

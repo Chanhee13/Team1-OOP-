@@ -30,13 +30,13 @@ public class MyTest {
 		h.setName("Jhon");
 		h.setGender(true);
 		u.setHero(h);
-		System.out.println("Test Name : "+u.getHero().getName());
+		System.out.println("Name : "+u.getHero().getName());
 		if(u.getHero().isGender()==true)
 		{
-			System.out.println("Gender is Female");
+			System.out.println("Gender : Female");
 		}
 		else
-			System.out.println("Gender is Male");
+			System.out.println("Gender : Male");
 		
 		//------------------------------ Stage Pick Test
 		System.out.println("---------------Stage Pick TEST---------------");
@@ -59,7 +59,14 @@ public class MyTest {
 		Dr_T t = new Dr_T();
 		t.setToTeach();
 		System.out.println(t.GetToTeach());
-		System.out.println(t.Celebrate());
+		
+		
+		//------------------------------ In Stage, Monster vs. Hero Test
+		System.out.println("---------------Monster vs. Hero TEST---------------");
+		
+		
+		
+		//System.out.println(t.Celebrate());
 		
 	}
 }
