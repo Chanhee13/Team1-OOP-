@@ -3,8 +3,10 @@ package User;
 public class User {
 	
 	private String ID;
-	private Hero hero;
-	private boolean[] cleared; 
+
+	Hero hero;
+	private boolean[] cleared={true,true,false,false,false,false}; 
+
 	
 	public String getID() {
 		return ID;
@@ -19,6 +21,10 @@ public class User {
 
 	public boolean[] getCleared() {
 		return cleared;
+	}
+	
+	public boolean isCleared(int stage){
+		return cleared[stage];
 	}
 
 

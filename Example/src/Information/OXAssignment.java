@@ -9,7 +9,7 @@ public class OXAssignment extends Assignment {
 		solution = true;
 	}
 	
-	public boolean isSolution() {
+	public boolean getSolution() {
 		return solution;
 	}
 

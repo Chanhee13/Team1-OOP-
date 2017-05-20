@@ -1,18 +1,20 @@
 package Monster;
 import Information.*;
+import Manage.gameManager;
+
 import java.util.*;
 
 public abstract class Monster {
 	private String name;
 	private int HP;
 	private int damage;
-	private ArrayList<Assignment> assignment = new ArrayList<Assignment> ();
+	protected ArrayList<Assignment> assignments = new ArrayList<Assignment> ();
 	
-	public String getname() {
+	public String getName() {
 		return name;
 	}
 	
-	public void setname(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 	
@@ -24,29 +26,38 @@ public abstract class Monster {
 		this.HP = HP;
 	}
 	
-	public int getdamage() {
+	public int getDamage() {
 		return damage;
 	}
 	
-	public void setdamage(int damage) {
+	public void setDamage(int damage) {
 		this.damage = damage;
 	}
 	
 	//여기까지 변수 getter와 setter 선언
 	
 	public ArrayList<Assignment> getAssignment() {
-		return assignment;
+		return assignments;
 	}
 
 	public void setAssignment(ArrayList<Assignment> assignment) {
-		this.assignment = assignment;
+		 int stage = gameManager.getRecentStage();
+		 Information info = new Information(stage);
+			
+			//To Do:
+			//		
+			//		Information File 뭉치을 순회하면서 Stage에 맞는 Information을 얻어 옵니다.
+		 this.assignments = info.getAssingment();
 	}
 
 	public void askProblem()
 	{
-		System.out.println(/* 여기에 문제 질문 들어가겠죠? */);
+		int prb = gameManager.getRecentProblem();
+		Assignment ass = assignments.get(prb);
+		System.out.println(ass.getProblem());
 	}
 	
+
 	public boolean isCorrect()
 	{
 		int pick=1;
@@ -58,6 +69,10 @@ public abstract class Monster {
 			return false;
 		}
 	}
+
+	abstract public boolean isCorrect();
+
+
 	
 	public boolean isDead() {
 		if( this.getHP() <= 0) {

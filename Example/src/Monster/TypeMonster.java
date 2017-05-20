@@ -1,8 +1,29 @@
 package Monster;
 
+import Information.Assignment;
+import Information.TypeAssignment;
+import Manage.gameManager;
+import User.Hero;
+
 public class TypeMonster extends Monster{
 	private String guess;
 	
+	public boolean isCorrect(String userAnswer) {
+		int prb =gameManager.getRecentProblem();
+		String sol;
+		Assignment ass = assignments.get(prb);
+		if(ass instanceof TypeAssignment){
+			sol = ((TypeAssignment)ass).getSolution();
+		}else{
+			System.out.println("this Assignmentis not TypeAssignment");
+			return false;
+		}
+		
+		
+		if(userAnswer == sol) return true;
+		else return false;
+	}
+
 	public String getguess() {
 		return guess;
 	}
@@ -11,11 +32,8 @@ public class TypeMonster extends Monster{
 		this.guess = guess;
 	}
 	
-	public void askProblem() {
-		/*질문이 아직 만들어지지 않았으니 빈칸으로 채우겠습니다.*/
-	}
-	
 	public boolean isCorrect() {
-		return false; //일단 return 필요해서 적어놨습니다.
+		String userAnswer = (String) Hero.pickSolution();
+		return isCorrect(userAnswer);
 	}
 }

@@ -22,10 +22,8 @@ public class Dr_T {
 		//		
 		//		Information File 뭉치을 순회하면서 recentStage에 맞는 Information을 얻어 옵니다.
 		//
-		String toTeach = info.getToTeach();
-		// 지금은 파일이 없으므로 임시 값을 return하여 test해보자.
 		//this.toTeach = toTeach;
-		this.toTeach="OOP is very easy. Don't Worry!";
+		this.toTeach=info.getToTeach();;
 	}
 	public int getWhere() {
 		return where;

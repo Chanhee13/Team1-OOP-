@@ -5,7 +5,7 @@ public class ConditionSelectMonster extends SelectMonster implements ChangeCondi
 	@Override
 	public void enhance() {
 		
-		super.setdamage(super.getdamage()*3);
+		super.setDamage(super.getDamage()*3);
 		
 	}
 

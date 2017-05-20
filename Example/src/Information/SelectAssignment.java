@@ -1,15 +1,18 @@
 package Information;
 
-public class selectAssignment extends Assignment{
+public class SelectAssignment extends Assignment{
+	int solutionNum;
 	String solution;
+	int wrongNum[]= {1,2,3};
 	String[] wrong = new String[3];
 	
-	selectAssignment(int stage, int num){
+	SelectAssignment(int stage, int num){
 		setProblem("This is problem "+num+" at stage "+stage);
+		solutionNum=0;
 		solution = "solution";
-		wrong[0]="wrong1";
-		wrong[1]="wrong2";
-		wrong[2]="wrong3";
+		wrong[0]="wrong0";
+		wrong[1]="wrong1";
+		wrong[2]="wrong2";
 		
 	}
 	
@@ -24,6 +27,10 @@ public class selectAssignment extends Assignment{
 	}
 	public void setWrong(String[] wrong) {
 		this.wrong = wrong;
+	}
+
+	public int getSolutionNum() {
+		return solutionNum;
 	}
 
 }

@@ -38,7 +38,7 @@ public class Hero {
 	}
 
 	
-	public int pickSolution()
+	static public Object pickSolution()
 	{
 		return 0; // 일단 어떻게 넣을지는 정해져있지 않아서 오류 방지를 위해서 return 0 했습니다.
 	}
