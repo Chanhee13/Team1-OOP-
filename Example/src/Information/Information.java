@@ -7,7 +7,14 @@ public class Information {
 	private String toTeach;
 	private ArrayList<Assignment> assingment = new ArrayList<Assignment>();
 	
-	
+	public Information(int stage){
+		//String a = "stage "+stage;
+		ID = "This is Information's ID";
+		toTeach = "To teach something to do with stage"+stage;
+		assingment.add(new OXAssignment(stage,1));
+		assingment.add(new selectAssignment(stage,2));
+		assingment.add(new TypeAssignment(stage,3));
+	}
 	public String getID() {
 		return ID;
 	}

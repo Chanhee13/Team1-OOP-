@@ -2,7 +2,12 @@ package Information;
 
 public class TypeAssignment extends Assignment {
 	String solution;
-
+	
+	TypeAssignment(int stage, int num){
+		setProblem("This is problem "+num+" at stage "+stage);
+		solution = "sol";
+	}
+	
 	public String getSolution() {
 		return solution;
 	}

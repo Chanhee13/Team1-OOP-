@@ -16,7 +16,8 @@ public class Dr_T {
 	}
 	public void setToTeach() {
 		int recentStage = gameManager.getRecentStage();
-		Information info = new Information();//
+		Information info = new Information(recentStage);
+		
 		//To Do:
 		//		
 		//		Information File 뭉치을 순회하면서 recentStage에 맞는 Information을 얻어 옵니다.
