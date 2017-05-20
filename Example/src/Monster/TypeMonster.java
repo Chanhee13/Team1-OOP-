@@ -1,7 +1,6 @@
 package Monster;
 
 import Information.Assignment;
-import Information.SelectAssignment;
 import Information.TypeAssignment;
 import Manage.gameManager;
 import User.Hero;
