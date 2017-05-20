@@ -1,6 +1,7 @@
 package Monster;
 
 public class OXMonster extends Monster{
+	
 	public void askProblem() {
 		
 	}

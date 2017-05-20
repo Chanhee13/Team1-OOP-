@@ -49,7 +49,8 @@ public abstract class Monster {
 	
 	public boolean isCorrect()
 	{
-		if( 1== 1) {
+		int pick=1;
+		if(pick==1) {
 			return true;
 		}
 		

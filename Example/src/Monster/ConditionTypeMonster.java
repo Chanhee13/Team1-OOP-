@@ -5,7 +5,7 @@ public class ConditionTypeMonster extends TypeMonster implements ChangeCondition
 	@Override
 	public void enhance() {
 		
-		super.setdamage(super.getdamage()*2);
+		super.setdamage(super.getdamage()*3);
 		
 	}
 

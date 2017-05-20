@@ -3,6 +3,7 @@ package Manage;
 import User.Hero;
 import User.User;
 import Dr.Dr_T;
+import Information.*;
 
 public class MyTest {
 	
@@ -39,6 +40,8 @@ public class MyTest {
 		t.setToTeach();
 		System.out.println(t.GetToTeach());
 		System.out.println(t.Celebrate());
+		
+		
 		
 	}
 }

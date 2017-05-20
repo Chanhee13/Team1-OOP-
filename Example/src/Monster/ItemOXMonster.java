@@ -7,7 +7,8 @@ public class ItemOXMonster extends OXMonster implements ItemThrowable{
 
 	@Override
 	public void ItemThrow() {
-		// TODO Auto-generated method stub
+		
+		item = new Item();
 		
 	}
 	
