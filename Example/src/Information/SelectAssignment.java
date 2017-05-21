@@ -7,7 +7,7 @@ public class SelectAssignment extends Assignment{
 	String[] wrong = new String[3];
 	
 	SelectAssignment(int stage, int num){
-		setProblem("This is problem "+num+" at stage "+stage);
+		setProblem("This is Select problem "+num+" at stage "+stage);
 		solutionNum=0;
 		solution = "solution";
 		wrong[0]="wrong0";

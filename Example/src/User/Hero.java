@@ -6,13 +6,16 @@ public class Hero {
 	
 	private String Name;
 	private boolean Gender; 
-	private int HP;
+	private int HP = 50;
 	Item[] item; // Composed to 의 경우에 Private 해야될지 헷갈려서 일단 이렇게 두었습니다.
 	
 	public void setName(String name) {
 		if(name!=null)Name = name;
 	}
-
+	public String getName() {
+		return Name;
+	}
+	
 	public boolean isGender() {
 		return Gender;
 	}
@@ -38,9 +41,8 @@ public class Hero {
 	}
 
 	
-	static public Object pickSolution()
-	{
-		return 0; // 일단 어떻게 넣을지는 정해져있지 않아서 오류 방지를 위해서 return 0 했습니다.
+	public static Object pickSolution(Object o){
+		return o;
 	}
 	
 	public void useitem()
@@ -50,9 +52,7 @@ public class Hero {
 	
 	//------------ getter & setter 부분은 Name이랑 Gender만 설정해두었습니다.
 	
-	public String getName() {
-		return Name;
-	}
+	
 	
 	
 

@@ -9,7 +9,7 @@ public class Dr_T {
 	int where;
 	
 	public String Celebrate(){
-		return "Congratulations!";
+		return "You cleared Stage"+gameManager.getRecentStage()+", Congratulations!";
 	}
 	public String GetToTeach() {
 		return toTeach;

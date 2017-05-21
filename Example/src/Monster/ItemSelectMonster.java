@@ -2,7 +2,7 @@ package Monster;
 
 import game.Item;
 
-public class ItemOXMonster extends OXMonster implements ItemThrowable{
+public class ItemSelectMonster extends SelectMonster implements ItemThrowable {
 	static Item item;
 	static int i = 1;
 	static void setItem(){
@@ -15,7 +15,6 @@ public class ItemOXMonster extends OXMonster implements ItemThrowable{
 	@Override
 	public Item ItemThrow() {
 		item.setAvailable(true);
-		return item; 
+		return item;
 	}
-	
 }

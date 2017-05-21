@@ -5,11 +5,18 @@ import Manage.gameManager;
 import java.util.*;
 
 public abstract class Monster {
-	private String name;
-	private int HP;
-	private int damage;
-	protected ArrayList<Assignment> assignments = new ArrayList<Assignment> ();
+	static int i =0;
+	private String name = "monster "+i;
+	private int HP=0;
+	private int damage=5;
+	private ArrayList<Assignment> assignments = new ArrayList<Assignment> ();
 	
+	Monster(){
+		i++;
+	}
+	public void addAssignment(Assignment e){
+		assignments.add(e);
+	}
 	public String getName() {
 		return name;
 	}
@@ -43,36 +50,21 @@ public abstract class Monster {
 	public void setAssignment(ArrayList<Assignment> assignment) {
 		 int stage = gameManager.getRecentStage();
 		 Information info = new Information(stage);
-			
-			//To Do:
-			//		
-			//		Information File 뭉치을 순회하면서 Stage에 맞는 Information을 얻어 옵니다.
-		 this.assignments = info.getAssingment();
+		 this.assignments = info.getAssingments();
 	}
 
-	public void askProblem()
+	public Assignment askProblem()
 	{
 		int prb = gameManager.getRecentProblem();
 		Assignment ass = assignments.get(prb);
 		System.out.println(ass.getProblem());
+		return ass;
 	}
 	
 
-	public boolean isCorrect()
-	{
-		int pick=1;
-		if(pick==1) {
-			return true;
-		}
-		
-		else {
-			return false;
-		}
-	}
+	abstract public boolean isCorrect(Object o);
 
-	abstract public boolean isCorrect();
-
-
+	
 	
 	public boolean isDead() {
 		if( this.getHP() <= 0) {

@@ -7,15 +7,10 @@ import User.Hero;
 
 public class SelectMonster extends Monster{
 	
-
-	public void askProblem(){
-		
-	}
-	
 	public boolean isCorrect(int userAnswer) {
 		int prb =gameManager.getRecentProblem();
 		int sol;
-		Assignment ass = assignments.get(prb);
+		Assignment ass = this.getAssignment().get(prb);
 		if(ass instanceof SelectAssignment){
 			sol = ((SelectAssignment)ass).getSolutionNum();
 		}else{
@@ -24,13 +19,16 @@ public class SelectMonster extends Monster{
 		}
 		
 		
-		if(userAnswer == sol) return true;
+		if(userAnswer == sol) {
+			this.setHP(this.getHP()-10);
+			return true;
+		}
 		else return false;
 	}
 
 	@Override
-	public boolean isCorrect() {
-		int userAnswer = (int) Hero.pickSolution();
+	public boolean isCorrect(Object o) {
+		int userAnswer = (int) Hero.pickSolution(o);
 		return isCorrect(userAnswer);
 	}
 }

@@ -4,7 +4,7 @@ public class TypeAssignment extends Assignment {
 	String solution;
 	
 	TypeAssignment(int stage, int num){
-		setProblem("This is problem "+num+" at stage "+stage);
+		setProblem("This is Type problem "+num+" at stage "+stage);
 		solution = "sol";
 	}
 	

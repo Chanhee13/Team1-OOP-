@@ -3,10 +3,12 @@ package Manage;
 import User.Hero;
 import User.User;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import Dr.Dr_T;
 import Information.*;
+import Monster.*;
 
 public class MyTest {
 	
@@ -40,17 +42,16 @@ public class MyTest {
 		
 		//------------------------------ Stage Pick Test
 		System.out.println("---------------Stage Pick TEST---------------");
-		gameManager g = new gameManager();
 		
-		System.out.println("select stage : ");
+		//System.out.println("select stage : ");
 		//int picked = scan.nextInt();
 		int picked = 2;
 		if(picked==0||u.isCleared(picked-1)){
 			System.out.println("Start Stage "+picked);
-			g.setRecentStage(picked);
+			gameManager.setRecentStage(picked);
 		}else{
 			System.out.println("Not cleared previous stage");
-			g.setRecentStage(0);
+			gameManager.setRecentStage(0);
 		}
 		
 		
@@ -63,12 +64,109 @@ public class MyTest {
 		
 		//------------------------------ In Stage, Monster vs. Hero Test
 		System.out.println("---------------Monster vs. Hero TEST---------------");
+		Information info = new Information(gameManager.getRecentStage());
+		OXMonster ox = new OXMonster();
+		SelectMonster se = new SelectMonster();
+		TypeMonster ty = new TypeMonster();
 		
+		ArrayList<Assignment> as = info.getAssingments();
+		for(int i=0; i<as.size(); i++){
+			System.out.println(as.get(i));
+			if(as.get(i) instanceof OXAssignment){
+				ox.addAssignment(as.get(i));
+				ox.setHP(ox.getHP()+10);
+				System.out.println("OX");
+			}else if(as.get(i) instanceof SelectAssignment){
+				se.addAssignment(as.get(i));
+				se.setHP(se.getHP()+10);
+				System.out.println("SE");
+			}else if(as.get(i) instanceof TypeAssignment){
+				ty.addAssignment(as.get(i));
+				ty.setHP(ty.getHP()+10);
+				System.out.println("TY");
+			}
+		}
 		
+		int point=0;
+		for(int i=0; i<ox.getAssignment().size(); i++){
+			ox.askProblem();
+			if(ox.isCorrect((boolean)Hero.pickSolution(true))){
+				System.out.println("Good!");
+				ox.setHP(ox.getHP()-10);
+			}else{
+				System.out.println("ば.ば");
+			}
+		}
+		if(ox.isDead()){
+			System.out.println(ox.getName()+" is Dead!");
+			point++;
+		}
+		for(int i=0; i<se.getAssignment().size(); i++){
+			se.askProblem();
+			if(se.isCorrect((int)Hero.pickSolution(0))){
+				System.out.println("Good!");
+				ox.setHP(ox.getHP()-10);
+			}else{
+				System.out.println("ば.ば");
+			}
+		}
 		
-		//System.out.println(t.Celebrate());
+		if(ox.isDead()){
+			System.out.println(se.getName()+" is Dead!");
+			point++;
+		}
+		for(int i=0; i<ty.getAssignment().size(); i++){
+			ty.askProblem();
+			if(ty.isCorrect((String)Hero.pickSolution("sol"))){
+				System.out.println("Good!");
+				ox.setHP(ox.getHP()-10);
+			}else{
+				System.out.println("ば.ば");
+			}
+		}
+		if(ox.isDead()){
+			System.out.println(ty.getName()+" is Dead!");
+			point++;
+		}
 		
-		
+		if(point==3){
+			System.out.println(t.Celebrate());
+		}
+		/*
+		while(ox.getAssignment().size()>0){
+			int i=0;
+			System.out.println("ox ass size : "+ox.getAssignment().size());
+			ox.askProblem();
+			if(ox.isCorrect((boolean)Hero.pickSolution(true))){
+				System.out.println("Good!");
+				ArrayList<Assignment> asTemp = ox.getAssignment();
+				asTemp.remove(i);
+				i++;
+				ox.setAssignment(asTemp);
+				System.out.println(ox.getAssignment().size());
+			}else{
+				System.out.println("ば.ば");
+			}
+		}
+		while(se.getAssignment().size()>0){
+			int i = 0;
+			se.askProblem();
+			if(se.isCorrect((int)Hero.pickSolution(0))){
+				ArrayList<Assignment> asTemp = se.getAssignment();
+				asTemp.remove(i);
+				i++;
+				se.setAssignment(asTemp);
+			}
+		}
+		while(ty.getAssignment().size()>0){
+			ty.askProblem();
+			if(ty.isCorrect((String)Hero.pickSolution("sol"))){
+				ArrayList<Assignment> asTemp = ty.getAssignment();
+				asTemp.remove(ty.askProblem());
+				ty.setAssignment(asTemp);
+			}
+		}
+		*/	
 		
 	}
 }

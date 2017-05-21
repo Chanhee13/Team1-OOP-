@@ -7,15 +7,10 @@ import User.Hero;
 
 public class OXMonster extends Monster{
 
-	
-	public void askProblem() {
-		
-	}
-
 	public boolean isCorrect(boolean userAnswer) {
 		int prb =gameManager.getRecentProblem();
 		boolean sol;
-		Assignment ass = assignments.get(prb);
+		Assignment ass = this.getAssignment().get(prb);
 		if(ass instanceof OXAssignment){
 			sol = ((OXAssignment)ass).getSolution();
 		}else{
@@ -24,14 +19,20 @@ public class OXMonster extends Monster{
 		}
 		
 		
-		if(userAnswer == sol) return true;
-		else return false;
+		if(userAnswer == sol) {
+			this.setHP(this.getHP()-10);
+			return true;
+		}
+		else {
+			//User Ã¤·Â±ð±â
+			return false;
+		}
 
 	}
 
 	@Override
-	public boolean isCorrect() {
-		boolean userAnswer = (boolean) Hero.pickSolution();
+	public boolean isCorrect(Object o) {
+		boolean userAnswer = (boolean) Hero.pickSolution(o);
 		return isCorrect(userAnswer);
 	}
 }

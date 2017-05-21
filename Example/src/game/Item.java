@@ -8,7 +8,6 @@ public class Item {
 	
 	private String Name;
 	private int healingAmount;
-	private int healAmount;
 	private boolean available;
 	
 	//------------ getter & setter는 일단 이렇게 정해두었습니다.
@@ -29,15 +28,6 @@ public class Item {
 	public void setHealingAmount(int healingAmount) {
 		if(healingAmount>0)
 		this.healingAmount = healingAmount;
-	}
-
-	public int getHealAmount() {
-		return healAmount;
-	}
-
-	public void setHealAmount(int healAmount) {
-		if(healAmount>0)
-		this.healAmount = healAmount;
 	}
 
 	public boolean isAvailable() {

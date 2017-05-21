@@ -1,7 +1,12 @@
 package Monster;
 
+import game.Item;
+
 public interface ItemThrowable {
 	
-	abstract void ItemThrow();
+	static void setItem(){
+		
+	};
+	abstract Item ItemThrow();
 
 }

@@ -5,7 +5,7 @@ public class OXAssignment extends Assignment {
 	private boolean solution;
 	
 	OXAssignment(int stage, int num){
-		setProblem("This is problem "+num+" at stage "+stage);
+		setProblem("This is OX problem "+num+" at stage "+stage);
 		solution = true;
 	}
 	
