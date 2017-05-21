@@ -31,7 +31,4 @@ public class Dr_T {
 	public void setWhere(int where) {
 		this.where = where;
 	}
-	
-	
-	
 }
