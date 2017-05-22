@@ -7,6 +7,12 @@ public class ConditionOXMonster extends OXMonster implements ChangeCondition{
 		
 		super.setDamage(super.getDamage()*3);
 	}
+	@Override
+	public void poison(){
+		
+		
+		
+	}
 	
 
 }

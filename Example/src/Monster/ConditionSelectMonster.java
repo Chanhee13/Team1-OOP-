@@ -9,6 +9,13 @@ public class ConditionSelectMonster extends SelectMonster implements ChangeCondi
 		
 	}
 
+	@Override
+	public void poison(){
+		
+		
+		
+	}
+	
 
 
 }

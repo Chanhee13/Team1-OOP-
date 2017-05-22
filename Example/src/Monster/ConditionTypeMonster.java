@@ -8,6 +8,13 @@ public class ConditionTypeMonster extends TypeMonster implements ChangeCondition
 		super.setDamage(super.getDamage()*3);
 		
 	}
+	@Override
+	public void poison(){
+		
+		
+		
+	}
+	
 
 
 
