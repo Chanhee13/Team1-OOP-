@@ -1,7 +1,5 @@
 package game;
 
-
-
 // item Class 는 Composed 부분이 있어서 제가 미리 만들어두었습니다.(편동혁)
 
 public class Item {
@@ -38,9 +36,10 @@ public class Item {
 		this.available = available;
 	}
 
-	public void Beused(){
+	public boolean beUsed(){ //우선 아이템 쓴 것을 T로 정하고 임시로 만들어 둠 
 		// Empty Method(빈 메소드)
+	boolean a=true;
+	return a;
 	}
-
 
 }

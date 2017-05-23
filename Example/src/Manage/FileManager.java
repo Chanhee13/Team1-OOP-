@@ -35,7 +35,7 @@ public class FileManager {
 		FileWriter fw = new FileWriter("text1.txt"); // 일단 text1에 저장해 두었음
 		User user = new User();
 		String data = user.getID(); //받은 것을 저장하는 것인지 파일에서 받아서 저장하는 것인지모르겠음 일단 받은 것을 저장하는 것으로 해놓았음
-		fw.write(data);
+		fw.write(data); //makeUser에서 setID를 썼는데 makeUSer에서 쓰는 것인지  makeID에서 쓰는 것인지 헷갈림
 		fw.close();
 	}
 
