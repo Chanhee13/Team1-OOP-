@@ -4,9 +4,9 @@ public class OXAssignment extends Assignment {
 	
 	private boolean solution;
 	
-	OXAssignment(int stage, int num){
-		setProblem("This is OX problem "+num+" at stage "+stage);
-		solution = true;
+	OXAssignment(int stage, String pro, boolean sol){
+		setProblem(pro);
+		solution = sol;
 	}
 	
 	public boolean getSolution() {

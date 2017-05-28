@@ -1,0 +1,13 @@
+1
+&Class is blueprint of an object. 
+Class defines instance variables(state) and methods(behavior).
+Example: class ¡°Dog¡± has variables size, breed and name, and a method bark().
+Object is an instance(realization) of the class.
+Many objects of the same class can exist, such as yourDog,myDog,...
+&ox,Class is blueprint of an object,O.
+ox,If dog is a class, Chihuahua is a object,O.
+ox,Every Java program has at least one class with a main() method,O.
+se,What is state of objects?,instance variable,method,classes,function.
+se,Which of the following is not a primitive type?,String,int,double,boolean.
+ty,class is a (	) of an object,blueprint.
+ty,(	) is a realization of the Class,object.

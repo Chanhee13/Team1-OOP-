@@ -45,7 +45,7 @@ public class MyTest {
 		
 		//System.out.println("select stage : ");
 		//int picked = scan.nextInt();
-		int picked = 2;
+		int picked = 1;
 		if(picked==0||u.isCleared(picked-1)){
 			System.out.println("Start Stage "+picked);
 			gameManager.setRecentStage(picked);
@@ -53,18 +53,15 @@ public class MyTest {
 			System.out.println("Not cleared previous stage");
 			gameManager.setRecentStage(0);
 		}
-		
+		Information info = new Information(gameManager.getRecentStage());
 		
 		//------------------------------ In Stage, Dr_T's Teaching Test
 		System.out.println("---------------Dr_T's Teaching TEST---------------");
-		Dr_T t = new Dr_T();
-		t.setToTeach();
-		System.out.println(t.GetToTeach());
+		System.out.println(Dr_T.GetToTeach());
 		
 		
 		//------------------------------ In Stage, Monster vs. Hero Test
 		System.out.println("---------------Monster vs. Hero TEST---------------");
-		Information info = new Information(gameManager.getRecentStage());
 		OXMonster ox = new OXMonster();
 		SelectMonster se = new SelectMonster();
 		TypeMonster ty = new TypeMonster();
@@ -130,43 +127,8 @@ public class MyTest {
 		}
 		
 		if(point==3){
-			System.out.println(t.Celebrate());
+			System.out.println(Dr_T.Celebrate());
 		}
-		/*
-		while(ox.getAssignment().size()>0){
-			int i=0;
-			System.out.println("ox ass size : "+ox.getAssignment().size());
-			ox.askProblem();
-			if(ox.isCorrect((boolean)Hero.pickSolution(true))){
-				System.out.println("Good!");
-				ArrayList<Assignment> asTemp = ox.getAssignment();
-				asTemp.remove(i);
-				i++;
-				ox.setAssignment(asTemp);
-				System.out.println(ox.getAssignment().size());
-			}else{
-				System.out.println("¤Ð.¤Ð");
-			}
-		}
-		while(se.getAssignment().size()>0){
-			int i = 0;
-			se.askProblem();
-			if(se.isCorrect((int)Hero.pickSolution(0))){
-				ArrayList<Assignment> asTemp = se.getAssignment();
-				asTemp.remove(i);
-				i++;
-				se.setAssignment(asTemp);
-			}
-		}
-		while(ty.getAssignment().size()>0){
-			ty.askProblem();
-			if(ty.isCorrect((String)Hero.pickSolution("sol"))){
-				ArrayList<Assignment> asTemp = ty.getAssignment();
-				asTemp.remove(ty.askProblem());
-				ty.setAssignment(asTemp);
-			}
-		}
-		*/	
 		
 	}
 }
