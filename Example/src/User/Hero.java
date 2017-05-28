@@ -7,14 +7,13 @@ public class Hero {
 	private boolean Gender; 
 	private int HP = 50;
 
-	
 	public void setName(String name) {
 		if(name!=null)Name = name;
 	}
 	public String getName() {
 		return Name;
 	}
-	
+	//
 	public boolean isGender() {
 		return Gender;
 	}
@@ -30,6 +29,7 @@ public class Hero {
 	public void setHP(int HP) {
 		this.HP = HP;
 	}
+
 	
 	public static Object pickSolution(Object o){
 		return o;
