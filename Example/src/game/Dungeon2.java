@@ -1,5 +1,5 @@
 package game;
-
+import Manage.*;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -115,6 +115,7 @@ public class Dungeon2 extends JFrame {
 		);
 		
 		JRadioButton rdbtnA = new JRadioButton("A");
+		
 		buttonGroup.add(rdbtnA);
 		panel.add(rdbtnA);
 		

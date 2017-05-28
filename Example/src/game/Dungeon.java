@@ -19,7 +19,8 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.ImageIcon;
 import javax.swing.border.TitledBorder;
 
-
+import Manage.gameManager;
+import Monster.*;
 
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
@@ -82,7 +83,18 @@ public class Dungeon extends JFrame {
 		JButton btnNewButton = new JButton("Answer\n check");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				Monster m = gameManager.getRecentMonster();
+				if(m instanceof	SelectMonster){
+					SelectCheckBox.main(null);
+				}
+				else if(m instanceof OXMonster){
+					SelectOXBox.main(null);
+				}
+				else if(m instanceof TypeMonster){
+					SelectTypeBox.main(null);
+				}
 				
+				/*
 				JFrame frame = new JFrame("Answer check");
 				frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 				JTextArea textarea = new JTextArea();
@@ -94,6 +106,7 @@ public class Dungeon extends JFrame {
 				frame.getContentPane().add(scrollPane);
 				frame.setSize(300, 200);
 				frame.setVisible(true);
+				*/
 			}
 		});
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);

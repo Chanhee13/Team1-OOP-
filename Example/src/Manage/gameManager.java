@@ -6,7 +6,7 @@ public class gameManager {
 	static private int recentStage;
 	static private Monster recentMonster;
 	static private int recentProblem;
-	
+	static String recentSolution;
 	public static int getRecentStage() {
 		return recentStage;
 	}
@@ -25,6 +25,7 @@ public class gameManager {
 	public static void setRecentProblem(int recentProblem) {
 		gameManager.recentProblem = recentProblem;
 	}
+	
 	
 	
 	
