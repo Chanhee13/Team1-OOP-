@@ -1,13 +1,12 @@
 package User;
 
-import game.Item;
 
 public class Hero {
 	
 	private String Name;
 	private boolean Gender; 
 	private int HP = 50;
-	Item[] item; // Composed to 의 경우에 Private 해야될지 헷갈려서 일단 이렇게 두었습니다.
+
 	
 	public void setName(String name) {
 		if(name!=null)Name = name;
