@@ -137,6 +137,7 @@ public class Main extends JFrame implements ActionListener {
 		MyTest a1 = new MyTest(); //게임으로 들어가야 하는것인데 음 우리 클래스에서 어디로 들어가는것인지 모르겠음
 						
 						frame.dispose();
+						MyTest.main(null);
 					}
 
 				}
