@@ -1,28 +1,26 @@
 package Dr;
 
-import Information.*;
+
 import Manage.gameManager;
 
 
 public class Dr_T {
-	String toTeach;
-	int where;
+	static String toTeach;
+	static int where;
 	
-	public String Celebrate(){
+	static public String Celebrate(){
 		return "You cleared Stage"+gameManager.getRecentStage()+", Congratulations!";
 	}
-	public String GetToTeach() {
+	static public String GetToTeach() {
 		return toTeach;
 	}
-	public void setToTeach() {
-		int recentStage = gameManager.getRecentStage();
-		Information info = new Information(recentStage);
-		this.toTeach=info.getToTeach();;
+	static public void setToTeach(String t) {
+		toTeach=t;
 	}
-	public int getWhere() {
+	static public int getWhere() {
 		return where;
 	}
-	public void setWhere(int where) {
-		this.where = where;
+	static public void setWhere(int w) {
+		where = w;
 	}
 }
