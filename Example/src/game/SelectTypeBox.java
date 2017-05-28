@@ -47,7 +47,7 @@ public class SelectTypeBox extends JFrame {
 		textField = new JTextField();
 		textField.setColumns(10);
 		
-		JButton btnOk = new JButton("OK");
+		JButton btnOk = new JButton("OK");//OK
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
