@@ -1,5 +1,7 @@
 package User;
 
+import game.Stage_GUI;
+
 public class User{
 	
 	private String ID;

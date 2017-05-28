@@ -1,5 +1,7 @@
 package Main;
 
+import User.User;
+import game.Stage_GUI;
 import java.awt.Container;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -134,10 +136,11 @@ public class Main extends JFrame implements ActionListener {
 				{
 					if (writePassword.getText().equals(indat[i][1])) // 사용자의 id가 같고  password를 csv와 비교할때
 					{
-		MyTest a1 = new MyTest(); //게임으로 들어가야 하는것인데 음 우리 클래스에서 어디로 들어가는것인지 모르겠음
-						
+						Stage_GUI stage = new Stage_GUI(); //게임으로 들어가야 하는것인데 음 우리 클래스에서 어디로 들어가는것인지 모르겠음
+						setID(writeUsername.getText());
+						System.out.println(ID);
 						frame.dispose();
-						MyTest.main(null);
+						stage.stage(writeUsername.getText());
 					}
 
 				}

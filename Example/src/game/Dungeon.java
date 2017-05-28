@@ -1,5 +1,6 @@
 package game;
 
+import game.Stage_GUI;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 

@@ -3,6 +3,7 @@ package game;
 import User.User;
 import Monster.Monster;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -26,7 +27,7 @@ public class Stage_GUI extends User implements ActionListener{
 	private JButton Stage7 = new JButton("Stage 7");
 	private JButton Stage8 = new JButton("Stage 8");
 	
-	public void stage()
+	public void stage(String name)
 	{
 		
 		
@@ -35,7 +36,6 @@ public class Stage_GUI extends User implements ActionListener{
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLayout(null);
 		
-		String name = super.getID();
 		
 		JLabel label = new JLabel("Welcome. " +name);
 		frame.add(label);
@@ -89,11 +89,6 @@ public class Stage_GUI extends User implements ActionListener{
 		
 	}
 	
-	public static void main(String[] args)
-	{
-		Stage_GUI st = new Stage_GUI();
-		st.stage();
-	}
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -101,58 +96,59 @@ public class Stage_GUI extends User implements ActionListener{
 		
 		if(bt == Stage1)
 		{
+			Stage1.setBackground(Color.GRAY);
 			frame.dispose();
-			Stage_GUI stage = new Stage_GUI();
-			stage.stage();
+			Dungeon D1 = new Dungeon();
+			D1.main(null);
 		}
 		
 		if(bt == Stage2)
 		{
 			frame.dispose();
-			Stage_GUI stage = new Stage_GUI();
-			stage.stage();
+			Dungeon2 D2 = new Dungeon2();
+			D2.main(null);
 		}
 		
 		if(bt == Stage3)
 		{
 			frame.dispose();
-			Stage_GUI stage = new Stage_GUI();
-			stage.stage();
+			Dungeon D1 = new Dungeon();
+			D1.main(null);
 		}
 		
 		if(bt == Stage4)
 		{
 			frame.dispose();
-			Stage_GUI stage = new Stage_GUI();
-			stage.stage();
+			Dungeon2 D2 = new Dungeon2();
+			D2.main(null);
 		}
 		
 		if(bt == Stage5)
 		{
 			frame.dispose();
-			Stage_GUI stage = new Stage_GUI();
-			stage.stage();
+			Dungeon D1 = new Dungeon();
+			D1.main(null);
 		}
 		
 		if(bt == Stage6)
 		{
 			frame.dispose();
-			Stage_GUI stage = new Stage_GUI();
-			stage.stage();
+			Dungeon2 D2 = new Dungeon2();
+			D2.main(null);
 		}
 		
 		if(bt == Stage7)
 		{
 			frame.dispose();
-			Stage_GUI stage = new Stage_GUI();
-			stage.stage();
+			Dungeon D1 = new Dungeon();
+			D1.main(null);
 		}
 		
 		if(bt == Stage8)
 		{
 			frame.dispose();
-			Stage_GUI stage = new Stage_GUI();
-			stage.stage();
+			Dungeon2 D2 = new Dungeon2();
+			D2.main(null);
 		}
 	}
 	private int StageNumber;
