@@ -13,6 +13,9 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.border.TitledBorder;
+
+import Manage.MyTest;
+
 import javax.swing.JLabel;
 
 
@@ -94,7 +97,8 @@ public class Stage_GUI extends User implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Object bt = e.getSource();
-		
+		MyTest.main(null);
+		Teaching.main(null);
 		if(bt == Stage1)
 		{
 			Stage1.setBackground(Color.GRAY);
