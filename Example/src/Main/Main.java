@@ -141,13 +141,9 @@ public class Main extends JFrame implements ActionListener {
 						setID(writeUsername.getText());
 						System.out.println(ID);
 						frame.dispose();
-<<<<<<< HEAD
+
 						stage.stage(writeUsername.getText());
-=======
-						Stage_GUI.main(null);
-						
->>>>>>> branch 'master' of https://github.com/Chanhee13/Team1-OOP-
-					}
+										}
 
 				}
 
