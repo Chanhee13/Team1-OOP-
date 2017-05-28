@@ -14,9 +14,6 @@ import javax.swing.border.TitledBorder;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-
-import Monster.Monster;
-
 public class Stage_GUI extends User implements ActionListener{
 	private JFrame frame = new JFrame("Select Stage");
 	
