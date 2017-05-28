@@ -42,8 +42,5 @@ public class Hero {
 	
 	//------------ getter & setter 부분은 Name이랑 Gender만 설정해두었습니다.
 	
-	
-	
-	
 
 }

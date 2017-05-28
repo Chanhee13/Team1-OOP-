@@ -6,13 +6,13 @@ public class SelectAssignment extends Assignment{
 	int wrongNum[]= {1,2,3};
 	String[] wrong = new String[3];
 	
-	SelectAssignment(int stage, int num){
-		setProblem("This is Select problem "+num+" at stage "+stage);
+	SelectAssignment(int stage, String pro ,  String sol, String[] wro){
+		setProblem(pro);
 		solutionNum=0;
-		solution = "solution";
-		wrong[0]="wrong0";
-		wrong[1]="wrong1";
-		wrong[2]="wrong2";
+		solution = sol;
+		wrong[0]=wro[0];
+		wrong[1]=wro[1];
+		wrong[2]=wro[2];
 		
 	}
 	

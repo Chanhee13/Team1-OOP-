@@ -3,9 +3,9 @@ package Information;
 public class TypeAssignment extends Assignment {
 	String solution;
 	
-	TypeAssignment(int stage, int num){
-		setProblem("This is Type problem "+num+" at stage "+stage);
-		solution = "sol";
+	TypeAssignment(int stage, String pro, String sol){
+		this.setProblem(pro);
+		this.setSolution(sol);
 	}
 	
 	public String getSolution() {
