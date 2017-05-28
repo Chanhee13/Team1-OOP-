@@ -20,6 +20,7 @@ import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
 import Manage.MyTest;
+import game.Stage_GUI;
 
 public class Main extends JFrame implements ActionListener {
 
@@ -137,7 +138,8 @@ public class Main extends JFrame implements ActionListener {
 				//		GameorStudy a1 = new GameorStudy(); //게임으로 들어가야 하는것인데 음 우리 클래스에서 어디로 들어가는것인지 모르겠음
 						
 						frame.dispose();
-						MyTest.main(null);
+						Stage_GUI.main(null);
+						
 					}
 
 				}

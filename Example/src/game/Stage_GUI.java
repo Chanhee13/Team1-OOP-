@@ -11,6 +11,9 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.border.TitledBorder;
+
+import Manage.MyTest;
+
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -98,7 +101,7 @@ public class Stage_GUI extends User implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Object bt = e.getSource();
-		
+		MyTest.main(null);
 		if(bt == Stage1)
 		{
 			frame.dispose();
