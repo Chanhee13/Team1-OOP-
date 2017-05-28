@@ -102,6 +102,7 @@ public class Stage_GUI extends User implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		Object bt = e.getSource();
 		MyTest.main(null);
+		Teaching.main(null);
 		if(bt == Stage1)
 		{
 			frame.dispose();
