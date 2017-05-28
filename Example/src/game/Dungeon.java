@@ -68,7 +68,7 @@ public class Dungeon extends JFrame {
 			protected void paintComponent(Graphics g) {
 				
 				g.drawImage(img, 0, 0,750,250, null);
-			
+			//
 	            }
 	        };
 
