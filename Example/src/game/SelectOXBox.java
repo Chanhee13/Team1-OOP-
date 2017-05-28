@@ -47,7 +47,7 @@ public class SelectOXBox extends JFrame {
 		
 		JRadioButton rdbtnFalse = new JRadioButton("False");
 		
-		JButton btnOk = new JButton("OK");
+		JButton btnOk = new JButton("OK"); //액션리스너 기능 추가행함
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
