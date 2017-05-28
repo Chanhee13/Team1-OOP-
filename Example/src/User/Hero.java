@@ -30,15 +30,6 @@ public class Hero {
 	public void setHP(int HP) {
 		this.HP = HP;
 	}
-
-	public Item[] getItem() {
-		return item;
-	}
-
-	public void setItem(Item[] item) {
-		this.item = item;
-	}
-
 	
 	public static Object pickSolution(Object o){
 		return o;
