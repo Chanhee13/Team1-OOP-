@@ -80,7 +80,7 @@ public class SelectOXBox extends JFrame implements ActionListener {
 		);
 		contentPane.setLayout(gl_contentPane);
 	}
-
+//
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
