@@ -85,6 +85,7 @@ public class Dungeon extends JFrame {
 		JButton btnNewButton = new JButton("Answer\n check");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+
 				Monster m = gameManager.getRecentMonster();
 				if(m instanceof	SelectMonster){
 					SelectCheckBox.main(null);
@@ -95,6 +96,7 @@ public class Dungeon extends JFrame {
 				else if(m instanceof TypeMonster){
 					SelectTypeBox.main(null);
 				}
+			
 				
 				/*
 				JFrame frame = new JFrame("Answer check");
