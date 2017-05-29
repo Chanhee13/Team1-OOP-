@@ -38,7 +38,7 @@ public class Stage_GUI extends User implements ActionListener{
 		
 		
 		frame.setSize(470, 700);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.setLayout(null);
 		
 		
@@ -87,7 +87,6 @@ public class Stage_GUI extends User implements ActionListener{
 		Stage7.addActionListener(this);
 		Stage8.addActionListener(this);
 		
-		
 		frame.setVisible(true);
 		frame.setResizable(false);
 		
@@ -99,7 +98,6 @@ public class Stage_GUI extends User implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		Object bt = e.getSource();
 		MyTest.main(null);
-		
 		if(bt == Stage1)
 		{
 			Stage1.setBackground(Color.GRAY);
@@ -182,5 +180,6 @@ public class Stage_GUI extends User implements ActionListener{
 	public void setStageNumber(int stageNumber) {
 		StageNumber = stageNumber;
 	}
+	
 
 }

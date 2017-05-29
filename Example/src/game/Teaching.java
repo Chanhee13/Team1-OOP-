@@ -23,11 +23,13 @@ public class Teaching extends JFrame {
 	/**
 	 * Launch the application.
 	 */
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					Teaching frame = new Teaching();
+					frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();

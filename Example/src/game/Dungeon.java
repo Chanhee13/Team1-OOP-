@@ -41,6 +41,7 @@ public class Dungeon extends JFrame {
 			public void run() {
 				try {
 					Dungeon frame = new Dungeon();
+					frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
