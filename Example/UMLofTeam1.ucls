@@ -75,7 +75,7 @@
   </class>  
   <class id="9" language="java" name="Information.TypeAssignment" project="Example" 
     file="/Example/src/Information/TypeAssignment.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="135" width="187" x="143" y="624"/>    
+    <position height="-1" width="-1" x="123" y="693"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -84,7 +84,7 @@
   </class>  
   <class id="10" language="java" name="Information.OXAssignment" project="Example" 
     file="/Example/src/Information/OXAssignment.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="135" width="189" x="370" y="624"/>    
+    <position height="-1" width="-1" x="327" y="690"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -93,7 +93,7 @@
   </class>  
   <class id="11" language="java" name="Information.SelectAssignment" project="Example" 
     file="/Example/src/Information/SelectAssignment.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="243" width="231" x="599" y="624"/>    
+    <position height="-1" width="-1" x="552" y="743"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -102,7 +102,7 @@
   </class>  
   <class id="12" language="java" name="Information.Information" project="Example" 
     file="/Example/src/Information/Information.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="225" width="249" x="370" y="184"/>    
+    <position height="-1" width="-1" x="460" y="299"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -120,7 +120,7 @@
   </class>  
   <class id="14" language="java" name="Main.Join" project="Example" file="/Example/src/Main/Join.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1002" y="619"/>    
+    <position height="-1" width="-1" x="1099" y="618"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -129,7 +129,7 @@
   </class>  
   <class id="15" language="java" name="Main.Main" project="Example" file="/Example/src/Main/Main.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1235" y="542"/>    
+    <position height="-1" width="-1" x="1305" y="537"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -138,7 +138,7 @@
   </class>  
   <class id="16" language="java" name="Main.idcheck" project="Example" file="/Example/src/Main/idcheck.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1474" y="457"/>    
+    <position height="-1" width="-1" x="1505" y="447"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -147,7 +147,7 @@
   </class>  
   <class id="17" language="java" name="Main.IdPasswordCheck" project="Example" 
     file="/Example/src/Main/IdPasswordCheck.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1708" y="475"/>    
+    <position height="-1" width="-1" x="1708" y="460"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -174,7 +174,7 @@
   </class>  
   <class id="20" language="java" name="Manage.gameManager" project="Example" file="/Example/src/Manage/gameManager.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="666" y="1861"/>    
+    <position height="-1" width="-1" x="385" y="1259"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -192,7 +192,7 @@
   </class>  
   <class id="22" language="java" name="Monster.TypeMonster" project="Example" 
     file="/Example/src/Monster/TypeMonster.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="274" y="1479"/>    
+    <position height="-1" width="-1" x="583" y="1254"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -201,7 +201,7 @@
   </class>  
   <class id="23" language="java" name="Monster.SelectMonster" project="Example" 
     file="/Example/src/Monster/SelectMonster.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="464" y="1452"/>    
+    <position height="-1" width="-1" x="773" y="1227"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -210,7 +210,7 @@
   </class>  
   <class id="24" language="java" name="Monster.OXMonster" project="Example" file="/Example/src/Monster/OXMonster.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="657" y="1452"/>    
+    <position height="-1" width="-1" x="966" y="1227"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -219,7 +219,7 @@
   </class>  
   <class id="25" language="java" name="Monster.Monster" project="Example" file="/Example/src/Monster/Monster.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="510" y="1169"/>    
+    <position height="-1" width="-1" x="822" y="599"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
