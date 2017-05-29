@@ -8,6 +8,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Manage.gameManager;
+
 import javax.swing.ButtonGroup;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
@@ -19,6 +22,8 @@ public class SelectOXBox extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
+	private JRadioButton rdbtnTrue;
+	private JRadioButton rdbtnFalse;
 	JButton btnOk = new JButton("OK"); //액션리스너 기능 추가행함
 	/**
 	 * Launch the application.
@@ -47,9 +52,9 @@ public class SelectOXBox extends JFrame implements ActionListener {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		JRadioButton rdbtnTrue = new JRadioButton("True");
+		rdbtnTrue = new JRadioButton("True");
 		buttonGroup.add(rdbtnTrue);
-		JRadioButton rdbtnFalse = new JRadioButton("False");
+		rdbtnFalse = new JRadioButton("False");
 		buttonGroup.add(rdbtnFalse);
 		
 		
@@ -86,15 +91,19 @@ public class SelectOXBox extends JFrame implements ActionListener {
 		
 		Object bt = e.getSource();
 		System.out.println(bt.toString());
-		//GameManager.
+		
+		if(rdbtnTrue.isSelected()){
+			gameManager.setRecentOXSolution(true);
+		}else if(rdbtnFalse.isSelected()){
+			gameManager.setRecentOXSolution(false);
+		}else{
+			System.out.println("Not Checked");
+		}
+		
 		if(bt.equals(btnOk)){
 			this.dispose();;
 		}
 		
 	}
 
-	private void exit(int i) {
-		// TODO Auto-generated method stub
-		
-	}
 }
