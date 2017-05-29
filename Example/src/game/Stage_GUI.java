@@ -15,6 +15,7 @@ import javax.swing.JFrame;
 import javax.swing.border.TitledBorder;
 
 import Manage.MyTest;
+import Manage.gameManager;
 
 import javax.swing.JLabel;
 
@@ -37,7 +38,7 @@ public class Stage_GUI extends User implements ActionListener{
 		
 		
 		frame.setSize(470, 700);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.setLayout(null);
 		
 		
@@ -86,7 +87,6 @@ public class Stage_GUI extends User implements ActionListener{
 		Stage7.addActionListener(this);
 		Stage8.addActionListener(this);
 		
-		
 		frame.setVisible(true);
 		frame.setResizable(false);
 		
@@ -100,21 +100,25 @@ public class Stage_GUI extends User implements ActionListener{
 		MyTest.main(null);
 		if(bt == Stage1)
 		{
-			frame.dispose();
 			Stage1.setBackground(Color.GRAY);
+			gameManager.setRecentStage(1);
 			Dungeon D1 = new Dungeon();
 			D1.main(null);
+			
 		}
 		
 		if(bt == Stage2)
-		{
+		{	
+			gameManager.setRecentStage(2);
 			frame.dispose();
-			Dungeon2 D2 = new Dungeon2();
-			D2.main(null);
+			Dungeon D1 = new Dungeon();
+			D1.main(null);
+			
 		}
 		
 		if(bt == Stage3)
 		{
+			gameManager.setRecentStage(3);
 			frame.dispose();
 			Dungeon D1 = new Dungeon();
 			D1.main(null);
@@ -122,13 +126,15 @@ public class Stage_GUI extends User implements ActionListener{
 		
 		if(bt == Stage4)
 		{
+			gameManager.setRecentStage(4);
 			frame.dispose();
-			Dungeon2 D2 = new Dungeon2();
-			D2.main(null);
+			Dungeon D1 = new Dungeon();
+			D1.main(null);
 		}
 		
 		if(bt == Stage5)
 		{
+			gameManager.setRecentStage(5);
 			frame.dispose();
 			Dungeon D1 = new Dungeon();
 			D1.main(null);
@@ -136,13 +142,15 @@ public class Stage_GUI extends User implements ActionListener{
 		
 		if(bt == Stage6)
 		{
+			gameManager.setRecentStage(6);
 			frame.dispose();
-			Dungeon2 D2 = new Dungeon2();
-			D2.main(null);
+			Dungeon D1 = new Dungeon();
+			D1.main(null);
 		}
 		
 		if(bt == Stage7)
 		{
+			gameManager.setRecentStage(7);
 			frame.dispose();
 			Dungeon D1 = new Dungeon();
 			D1.main(null);
@@ -150,10 +158,12 @@ public class Stage_GUI extends User implements ActionListener{
 		
 		if(bt == Stage8)
 		{
+			gameManager.setRecentStage(8);
 			frame.dispose();
-			Dungeon2 D2 = new Dungeon2();
-			D2.main(null);
+			Dungeon D1 = new Dungeon();
+			D1.main(null);
 		}
+		Teaching.main(null);
 	}
 	private int StageNumber;
 	Monster[] monster = new Monster[24];
@@ -170,5 +180,6 @@ public class Stage_GUI extends User implements ActionListener{
 	public void setStageNumber(int stageNumber) {
 		StageNumber = stageNumber;
 	}
+	
 
 }
