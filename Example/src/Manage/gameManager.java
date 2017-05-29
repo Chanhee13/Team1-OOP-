@@ -6,7 +6,9 @@ public class gameManager {
 	static private int recentStage;
 	static private Monster recentMonster;
 	static private int recentProblem;
-	static String recentSolution;
+	static boolean recentOXSolution;
+	static int recentSelectSolution;
+	static String recentStringSolution;
 	public static int getRecentStage() {
 		return recentStage;
 	}
