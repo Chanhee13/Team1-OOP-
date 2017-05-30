@@ -5,11 +5,13 @@ import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
+import java.awt.Container;
 import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -35,24 +37,27 @@ public class Dungeon extends JFrame {
 
 	/**
 	 * Launch the application.
+	 * @return 
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Dungeon frame = new Dungeon();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+
+	
+
 
 	/**
 	 * Create the frame.
 	 */
 	public Dungeon() {
+	   	 /*ImageIcon icon;
+	    	icon = new ImageIcon("java.png");
+	       
+	              
+	        JPanel background = new JPanel() {
+	            public void paintComponent(Graphics g) {
+	                g.drawImage(icon.getImage(), 0, 0, null);
+	                setOpaque(false); //그림을 표시하게 설정,투명하게 조절
+	                super.paintComponent(g);
+	            }
+	        }; */
 		setTitle("Fight!");
 		setBackground(Color.PINK);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -135,5 +140,23 @@ public class Dungeon extends JFrame {
 					.addContainerGap())
 		);
 		contentPane.setLayout(gl_contentPane);
+	}
+	
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Dungeon frame=new Dungeon();
+				
+				
+					frame.setVisible(true);
+					
+					
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
 	}
 }
