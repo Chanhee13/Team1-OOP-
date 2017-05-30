@@ -20,18 +20,27 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.ImageIcon;
 import javax.swing.border.TitledBorder;
 
+import Dr.Dr_T;
+import Information.Assignment;
+import Information.OXAssignment;
+import Information.SelectAssignment;
+import Information.TypeAssignment;
+import Manage.FileManager;
 import Manage.gameManager;
 import Monster.*;
+import User.Hero;
 
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.UIManager;
 
 public class Dungeon extends JFrame {
 
 	private JPanel contentPane;
+	JButton btnNewButton = new JButton("Answer\n check");
 
 	/**
 	 * Launch the application.
@@ -64,7 +73,8 @@ public class Dungeon extends JFrame {
 		
 		JPanel problem = new JPanel();
 		problem.setBorder(new TitledBorder(null, "Problem", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-
+		JTextArea textArea = new JTextArea();
+		problem.add(textArea);
 		Image img=new ImageIcon("java.png").getImage();
 		
 		JPanel monster = new JPanel() {
@@ -77,40 +87,40 @@ public class Dungeon extends JFrame {
 
 		monster.setBorder(UIManager.getBorder("InternalFrame.border"));
 		monster.setForeground(Color.WHITE);
-	
-
+		int stage = gameManager.getRecentStage();
+		Monster[] mons = FileManager.makeMonsters(stage);
 		
-		
-		
-		JButton btnNewButton = new JButton("Answer\n check");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Monster m = gameManager.getRecentMonster();
-				if(m instanceof	SelectMonster){
-					SelectCheckBox.main(null);
-				}
-				else if(m instanceof OXMonster){
-					SelectOXBox.main(null);
-				}
-				else if(m instanceof TypeMonster){
-					SelectTypeBox.main(null);
-				}
-				
-				/*
-				JFrame frame = new JFrame("Answer check");
-				frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-				JTextArea textarea = new JTextArea();
-				textarea.append("정답");
-				JScrollPane scrollPane = new JScrollPane();
-				scrollPane.setBounds(17, 31, 311, 165);
-				scrollPane.setViewportView(textarea);
-				textarea.setEditable(true);
-				frame.getContentPane().add(scrollPane);
-				frame.setSize(300, 200);
-				frame.setVisible(true);
-				*/
+
 			}
 		});
+		/*
+		 *	몬스터 만들어서 문제만드는 거 실패 
+		for(int i=0; i<3; i++){
+			
+			gameManager.setRecentMonster(mons[i]);
+			Monster m = gameManager.getRecentMonster();
+			textArea.setText(m.askProblem());
+			while(!m.isDead()){
+				btnNewButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent arg0) {
+						
+						if(m instanceof	SelectMonster){
+							SelectCheckBox.main(null);
+						}
+						else if(m instanceof OXMonster){
+							SelectOXBox.main(null);
+						}
+						else if(m instanceof TypeMonster){
+							SelectTypeBox.main(null);
+						}
+		
+					}
+				});
+			}
+		}
+		*/
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -137,4 +147,5 @@ public class Dungeon extends JFrame {
 		);
 		contentPane.setLayout(gl_contentPane);
 	}
+	
 }

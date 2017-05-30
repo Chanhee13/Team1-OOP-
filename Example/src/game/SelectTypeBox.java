@@ -82,7 +82,6 @@ public class SelectTypeBox extends JFrame implements ActionListener{
 		
 		if(e.getSource()==btnOk)
 		{
-			
 			this.dispose();
 		}
 		

@@ -10,6 +10,7 @@ public abstract class Monster {
 	private int HP=0;
 	private int damage=5;
 	private ArrayList<Assignment> assignments = new ArrayList<Assignment> ();
+	private int prbNum=0;
 	
 	Monster(){
 		i++;
@@ -47,18 +48,11 @@ public abstract class Monster {
 		return assignments;
 	}
 
-	public void setAssignment(ArrayList<Assignment> assignment) {
-		 int stage = gameManager.getRecentStage();
-		 Information info = new Information(stage);
-		 this.assignments = info.getAssingments();
-	}
 
-	public Assignment askProblem()
+	public String askProblem()
 	{
-		int prb = gameManager.getRecentProblem();
-		Assignment ass = assignments.get(prb);
-		System.out.println(ass.getProblem());
-		return ass;
+		Assignment ass = assignments.get(prbNum);
+		return ass.getProblem();
 	}
 	
 
