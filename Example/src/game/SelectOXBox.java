@@ -2,20 +2,29 @@ package game;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Manage.gameManager;
+
+import javax.swing.ButtonGroup;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JRadioButton;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
 
-public class SelectOXBox extends JFrame {
+public class SelectOXBox extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
-
+	private final ButtonGroup buttonGroup = new ButtonGroup();
+	private JRadioButton rdbtnTrue;
+	private JRadioButton rdbtnFalse;
+	JButton btnOk = new JButton("OK"); //액션리스너 기능 추가행함
 	/**
 	 * Launch the application.
 	 */
@@ -43,11 +52,13 @@ public class SelectOXBox extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		JRadioButton rdbtnTrue = new JRadioButton("True");
+		rdbtnTrue = new JRadioButton("True");
+		buttonGroup.add(rdbtnTrue);
+		rdbtnFalse = new JRadioButton("False");
+		buttonGroup.add(rdbtnFalse);
 		
-		JRadioButton rdbtnFalse = new JRadioButton("False");
 		
-		JButton btnOk = new JButton("OK"); //액션리스너 기능 추가행함
+		btnOk.addActionListener(this);
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -74,4 +85,25 @@ public class SelectOXBox extends JFrame {
 		);
 		contentPane.setLayout(gl_contentPane);
 	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+		Object bt = e.getSource();
+		System.out.println(bt.toString());
+		
+		if(rdbtnTrue.isSelected()){
+			gameManager.setRecentOXSolution(true);
+		}else if(rdbtnFalse.isSelected()){
+			gameManager.setRecentOXSolution(false);
+		}else{
+			System.out.println("Not Checked");
+		}
+		
+		if(bt.equals(btnOk)){
+			this.dispose();;
+		}
+		
+	}
+
 }

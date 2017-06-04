@@ -2,6 +2,8 @@ package game;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -12,9 +14,10 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
-public class SelectTypeBox extends JFrame {
+public class SelectTypeBox extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
+	private JButton btnOk;
 	private JTextField textField;
 
 	/**
@@ -47,7 +50,8 @@ public class SelectTypeBox extends JFrame {
 		textField = new JTextField();
 		textField.setColumns(10);
 		
-		JButton btnOk = new JButton("OK");//OK
+		btnOk = new JButton("OK");//OK
+		btnOk.addActionListener(this);
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -71,5 +75,15 @@ public class SelectTypeBox extends JFrame {
 					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 		);
 		contentPane.setLayout(gl_contentPane);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+		if(e.getSource()==btnOk)
+		{
+			this.dispose();
+		}
+		
 	}
 }

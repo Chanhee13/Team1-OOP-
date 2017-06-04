@@ -5,7 +5,7 @@ import java.awt.Container;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-public class subway extends Dungeon {
+public class subway extends Dungeon2 {
 	Container cPane;
 	ImageIcon img;
 	JLabel Imgbox;
