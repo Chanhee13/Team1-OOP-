@@ -35,10 +35,18 @@ public class Information implements Serializable {
 			//스테이지 지정
 			String[] result = copytext.split("&");
 			this.setID(result[0]);
+			System.out.println("ID ID ID");
+			System.out.println(result[0]);
 			//가르칠 내용 지정
 			this.setToTeach(result[1]);
 			Dr_T.setToTeach(result[1]);
-			String[] preAssingments = result[2].split(".");
+			System.out.println("여기확인");
+			String sTemp = result[2];
+			String[] preAssingments = sTemp.split(".^");
+			System.out.println(preAssingments[0]);
+			System.out.println(preAssingments[1]);
+			System.out.println(preAssingments[2]);			
+			
 			//문제와 정답과 오답 설정
 			for(String s : preAssingments){
 				String[] tempStr = s.split(",");
