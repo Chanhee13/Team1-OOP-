@@ -8,6 +8,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Manage.gameManager;
+
 import javax.swing.JTextField;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
@@ -79,6 +82,10 @@ public class SelectTypeBox extends JFrame implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		
+		
+		gameManager.setRecentTypeSolution(textField.getText());
+		gameManager.getRecentMonster().isCorrect(gameManager.getRecentTypeSolution());
 		
 		if(e.getSource()==btnOk)
 		{

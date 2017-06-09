@@ -29,8 +29,11 @@ public class Teaching extends JFrame {
 			public void run() {
 				try {
 					Teaching frame = new Teaching();
+					frame.setTitle("I'm Dr_T");
+					
 					frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 					frame.setVisible(true);
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -50,6 +53,7 @@ public class Teaching extends JFrame {
 		
 		JTextArea textArea = new JTextArea(Dr_T.GetToTeach());
 		String s = "Dr_T's teaching about Stage "+gameManager.getRecentStage();
+		textArea.setEditable(false);
 		JLabel lblNewLabel = new JLabel(s);
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(

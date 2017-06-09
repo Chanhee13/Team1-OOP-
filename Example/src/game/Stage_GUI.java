@@ -102,7 +102,7 @@ public class Stage_GUI extends User implements ActionListener{
 		{
 			Stage1.setBackground(Color.GRAY);
 			gameManager.setRecentStage(1);
-			Dungeon D1 = new Dungeon();
+			Dungeon2 D1 = new Dungeon2();
 			D1.main(null);
 			
 		}
@@ -111,7 +111,7 @@ public class Stage_GUI extends User implements ActionListener{
 		{	
 			gameManager.setRecentStage(2);
 			frame.dispose();
-			Dungeon D1 = new Dungeon();
+			Dungeon2 D1 = new Dungeon2();
 			D1.main(null);
 			
 		}
@@ -120,7 +120,7 @@ public class Stage_GUI extends User implements ActionListener{
 		{
 			gameManager.setRecentStage(3);
 			frame.dispose();
-			Dungeon D1 = new Dungeon();
+			Dungeon2 D1 = new Dungeon2();
 			D1.main(null);
 		}
 		
@@ -128,7 +128,7 @@ public class Stage_GUI extends User implements ActionListener{
 		{
 			gameManager.setRecentStage(4);
 			frame.dispose();
-			Dungeon D1 = new Dungeon();
+			Dungeon2 D1 = new Dungeon2();
 			D1.main(null);
 		}
 		
@@ -136,7 +136,7 @@ public class Stage_GUI extends User implements ActionListener{
 		{
 			gameManager.setRecentStage(5);
 			frame.dispose();
-			Dungeon D1 = new Dungeon();
+			Dungeon2 D1 = new Dungeon2();
 			D1.main(null);
 		}
 		
@@ -144,7 +144,7 @@ public class Stage_GUI extends User implements ActionListener{
 		{
 			gameManager.setRecentStage(6);
 			frame.dispose();
-			Dungeon D1 = new Dungeon();
+			Dungeon2 D1 = new Dungeon2();
 			D1.main(null);
 		}
 		
@@ -152,7 +152,7 @@ public class Stage_GUI extends User implements ActionListener{
 		{
 			gameManager.setRecentStage(7);
 			frame.dispose();
-			Dungeon D1 = new Dungeon();
+			Dungeon2 D1 = new Dungeon2();
 			D1.main(null);
 		}
 		
@@ -160,7 +160,7 @@ public class Stage_GUI extends User implements ActionListener{
 		{
 			gameManager.setRecentStage(8);
 			frame.dispose();
-			Dungeon D1 = new Dungeon();
+			Dungeon2 D1 = new Dungeon2();
 			D1.main(null);
 		}
 		Teaching.main(null);
