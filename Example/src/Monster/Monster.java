@@ -58,16 +58,12 @@ public abstract class Monster {
 
 	abstract public boolean isCorrect(Object o);
 
-	
-	
 	public boolean isDead() {
 		if( this.getHP() <= 0) {
 			return true;
 		}
 		else {
 			return false;
-		}	
+
 	}
-	
-	
 }

@@ -49,7 +49,7 @@ public class Information implements Serializable {
          String[] tempStr = result[2].split(",");
          
     
-          
+          // Assignment Ãß°¡
          for(int i=0;i<tempStr.length;i++){
         	 
         	 if(tempStr[i].equals("ox"))

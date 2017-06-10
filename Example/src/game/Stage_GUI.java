@@ -102,65 +102,65 @@ public class Stage_GUI extends User implements ActionListener{
 		{
 			Stage1.setBackground(Color.GRAY);
 			gameManager.setRecentStage(1);
-			Dungeon2 D1 = new Dungeon2();
+			Dungeon D1 = new Dungeon();
 			D1.main(null);
 			
 		}
 		
 		if(bt == Stage2)
 		{	
+			Stage2.setBackground(Color.GRAY);
 			gameManager.setRecentStage(2);
-			frame.dispose();
-			Dungeon2 D1 = new Dungeon2();
+			Dungeon D1 = new Dungeon();
 			D1.main(null);
 			
 		}
 		
 		if(bt == Stage3)
 		{
+			Stage3.setBackground(Color.GRAY);
 			gameManager.setRecentStage(3);
-			frame.dispose();
-			Dungeon2 D1 = new Dungeon2();
+			Dungeon D1 = new Dungeon();
 			D1.main(null);
 		}
 		
 		if(bt == Stage4)
 		{
+			Stage4.setBackground(Color.GRAY);
 			gameManager.setRecentStage(4);
-			frame.dispose();
-			Dungeon2 D1 = new Dungeon2();
+			Dungeon D1 = new Dungeon();
 			D1.main(null);
 		}
 		
 		if(bt == Stage5)
 		{
+			Stage5.setBackground(Color.GRAY);
 			gameManager.setRecentStage(5);
-			frame.dispose();
-			Dungeon2 D1 = new Dungeon2();
+			Dungeon D1 = new Dungeon();
 			D1.main(null);
 		}
 		
 		if(bt == Stage6)
 		{
+			Stage6.setBackground(Color.GRAY);
 			gameManager.setRecentStage(6);
-			frame.dispose();
-			Dungeon2 D1 = new Dungeon2();
+			Dungeon D1 = new Dungeon();
 			D1.main(null);
 		}
 		
 		if(bt == Stage7)
 		{
+			Stage6.setBackground(Color.GRAY);
 			gameManager.setRecentStage(7);
-			frame.dispose();
-			Dungeon2 D1 = new Dungeon2();
+			Dungeon D1 = new Dungeon();
 			D1.main(null);
 		}
 		
 		if(bt == Stage8)
 		{
+			Stage8.setBackground(Color.GRAY);
 			gameManager.setRecentStage(8);
-			frame.dispose();
-			Dungeon2 D1 = new Dungeon2();
+			Dungeon D1 = new Dungeon();
 			D1.main(null);
 		}
 		Teaching.main(null);
