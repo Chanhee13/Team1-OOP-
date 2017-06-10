@@ -13,6 +13,8 @@ import java.util.ArrayList;
 import Dr.Dr_T;
 
 public class Information implements Serializable {
+
+
    private String ID;
    private String toTeach;
    private static ArrayList<Assignment> assingments = new ArrayList<Assignment>();

@@ -14,6 +14,7 @@ public class TypeMonster extends Monster{
 		Assignment ass = this.getAssignment().get(prb);
 		if(ass instanceof TypeAssignment){
 			sol = ((TypeAssignment)ass).getSolution();
+			
 		}else{
 			System.out.println("this Assignmentis not TypeAssignment");
 			return false;
@@ -22,9 +23,13 @@ public class TypeMonster extends Monster{
 		
 		if(userAnswer == sol) {
 			this.setHP(this.getHP()-10);
+			System.out.println("User's Solution is Correct.");
 			return true;
 		}
-		else return false;
+		else {
+			System.out.println("User's Solution is NOT Correct.");
+			return false;
+		}
 	}
 
 	public String getguess() {

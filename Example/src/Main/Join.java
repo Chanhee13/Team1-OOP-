@@ -49,19 +49,19 @@ public class Join extends JFrame implements ActionListener {
 		cs.fill = GridBagConstraints.HORIZONTAL;
 
 		TitledBorder border = BorderFactory.createTitledBorder("making id for the game");
-		((JComponent) panel).setBorder(border); // 위에 들어가는것 title
+		((JComponent) panel).setBorder(border);
 
-		whatid = new JLabel("Userid: ");
+		whatid = new JLabel("User ID: ");
 		cs.gridx = 0;
 		cs.gridy = 0;
 		cs.gridwidth = 1;
-		panel.add(whatid, cs); // 아이디를 쓰시오 ( Id :)
+		panel.add(whatid, cs);
 
 		writenewusername = new JTextField(20);
 		cs.gridx = 1;
 		cs.gridy = 0;
 		cs.gridwidth = 2;
-		panel.add(writenewusername, cs); // 아이디 쓰는 칸
+		panel.add(writenewusername, cs); 
 
 		sameid = new JLabel();
 		cs.gridx = 2;
@@ -73,27 +73,27 @@ public class Join extends JFrame implements ActionListener {
 		cs.gridx = 0;
 		cs.gridy = 1;
 		cs.gridwidth = 1;
-		panel.add(whatpassword, cs); // 패스워드를 쓰시오 (Password :)
+		panel.add(whatpassword, cs); 
 
 		writenewpassword = new JTextField(20);
 		cs.gridx = 1;
 		cs.gridy = 1;
 		cs.gridwidth = 2;
-		panel.add(writenewpassword, cs); // 패스워드 쓰는 칸
+		panel.add(writenewpassword, cs); 
 
-		whatage = new JLabel("Age: (number)"); // 나이:
+		whatage = new JLabel("Age: (number)");
 		cs.gridx = 0;
 		cs.gridy = 2;
 		cs.gridwidth = 1;
 		panel.add(whatage, cs);
 
-		writeage = new JTextField(20); // 나이 쓰는칸
+		writeage = new JTextField(20);
 		cs.gridx = 1;
 		cs.gridy = 2;
 		cs.gridwidth = 2;
 		panel.add(writeage, cs);
 
-		saveid = new JButton("save the information"); // 회원가입 확인 !
+		saveid = new JButton("save the information"); 
 		cs.gridx = 0;
 		cs.gridy = 3;
 		cs.gridwidth = 2;
@@ -105,7 +105,7 @@ public class Join extends JFrame implements ActionListener {
 		cs.gridwidth = 1;
 		panel.add(cancel, cs);
 
-		saveid.addActionListener(this); // 회원가입 확인만 actionlistener을 넣으면 된다
+		saveid.addActionListener(this); 
 		cancel.addActionListener(this);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 

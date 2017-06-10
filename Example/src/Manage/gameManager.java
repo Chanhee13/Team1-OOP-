@@ -8,7 +8,7 @@ public class gameManager {
 	static private int recentProblem;
 	static private boolean recentOXSolution;
 	static private int recentSelectSolution;
-	static private String recentStringSolution;
+	static private String recentTypeSolution;
 	public static boolean isRecentOXSolution() {
 		return recentOXSolution;
 	}
@@ -21,11 +21,11 @@ public class gameManager {
 	public static void setRecentSelectSolution(int recentSelectSolution) {
 		gameManager.recentSelectSolution = recentSelectSolution;
 	}
-	public static String getRecentStringSolution() {
-		return recentStringSolution;
+	public static String getRecentTypeSolution() {
+		return recentTypeSolution;
 	}
-	public static void setRecentStringSolution(String recentStringSolution) {
-		gameManager.recentStringSolution = recentStringSolution;
+	public static void setRecentTypeSolution(String recentTypeSolution) {
+		gameManager.recentTypeSolution = recentTypeSolution;
 	}
 	public static int getRecentStage() {
 		return recentStage;
