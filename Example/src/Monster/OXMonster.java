@@ -15,16 +15,20 @@ public class OXMonster extends Monster{
 			sol = ((OXAssignment)ass).getSolution();
 		}else{
 			System.out.println("this Assignmentis not OXAssignment");
+			
 			return false;
 		}
 		
 		
 		if(userAnswer == sol) {
 			this.setHP(this.getHP()-10);
+			System.out.println("User's Solution is Correct.");
 			return true;
 		}
 		else {
-			//User Ã¤·Â±ð±â
+			Hero recentHero = null;
+			gameManager.getRecentHero().setHP(getHP() - 10);
+			System.out.println("User's Solution is NOT Correct.");
 			return false;
 		}
 

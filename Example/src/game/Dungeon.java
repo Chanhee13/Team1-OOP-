@@ -42,11 +42,14 @@ public class Dungeon extends JFrame {
 
    private JPanel contentPane;
    JButton btnNewButton = new JButton("Answer\n check");
+   static Hero hero=new Hero();
 
    /**
     * Launch the application.
     */
    public static void main(String[] args) {
+	
+	   gameManager.setRecentHero(hero);
       EventQueue.invokeLater(new Runnable() {
          public void run() {
             try {
@@ -64,6 +67,7 @@ public class Dungeon extends JFrame {
     * Create the frame.
     */
    public Dungeon() {
+	   
       setTitle("Fight!");
       setBackground(Color.PINK);
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

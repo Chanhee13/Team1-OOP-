@@ -112,6 +112,7 @@ public class MyTest {
 			System.out.println(se.getName()+" is Dead!");
 			point++;
 		}
+		Hero hero=new Hero();///////////
 		for(int i=0; i<ty.getAssignment().size(); i++){
 			ty.askProblem();
 			if(ty.isCorrect((String)Hero.pickSolution("sol"))){

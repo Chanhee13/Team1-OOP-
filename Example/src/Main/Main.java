@@ -22,10 +22,12 @@ import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
 import Manage.MyTest;
+import Manage.gameManager;
 import game.Stage_GUI;
 
-public class Main extends JFrame implements ActionListener {
 
+public class Main extends JFrame implements ActionListener {
+	
 	public JLabel Username;
 	public JLabel Password;
 	public JTextField writeUsername;

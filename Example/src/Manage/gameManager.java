@@ -1,8 +1,11 @@
 package Manage;
 
 import Monster.Monster;
+import User.Hero;
 
 public class gameManager {
+	static Hero hero=new Hero();
+	static private Hero recentHero= hero;
 	static private int recentStage;
 	static private Monster recentMonster;
 	static private int recentProblem;
@@ -45,6 +48,13 @@ public class gameManager {
 	public static void setRecentProblem(int recentProblem) {
 		gameManager.recentProblem = recentProblem;
 	}
+	public static Hero getRecentHero() {
+		return recentHero;
+	}
+	public static void setRecentHero(Hero recentHero) {
+		gameManager.recentHero = recentHero;
+	}
+
 	
 	
 	
