@@ -5,7 +5,6 @@ import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -43,7 +42,7 @@ public class Dungeon extends JFrame {
 
    private JPanel contentPane;
    JButton btnNewButton = new JButton("Answer\n check");
-   Hero hero=new Hero();
+
    /**
     * Launch the application.
     */
@@ -124,12 +123,8 @@ public class Dungeon extends JFrame {
 		mons[1] = se;
 		mons[2] = ty;
 		
-		int cnt=0;
-        for ( Monster mon : mons)
-        { 
-           if(mon.isDead())
-           {cnt++; }
-           
+		
+		         
 		         gameManager.setRecentMonster(mons[0]);
 		         Monster m = gameManager.getRecentMonster();
 		         textArea.setText(m.askProblem());
@@ -149,10 +144,6 @@ public class Dungeon extends JFrame {
 		      
 		               }
 		            });
-		            
-		               JOptionPane.showMessageDialog(null, "Dead Monster: "+cnt, "" + "Dead Monster Information",
-		                     JOptionPane.INFORMATION_MESSAGE);
-
 		         
 		  
       GroupLayout gl_contentPane = new GroupLayout(contentPane);
@@ -181,5 +172,5 @@ public class Dungeon extends JFrame {
       );
       contentPane.setLayout(gl_contentPane);
    }
-   }
+   
 }
