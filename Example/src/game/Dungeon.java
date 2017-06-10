@@ -94,8 +94,8 @@ public class Dungeon extends JFrame {
          public void actionPerformed(ActionEvent arg0) {
 
          }
-      });
-      /*
+      });//
+      /*/
        *   몬스터 만들어서 문제만드는 거 실패 
       for(int i=0; i<3; i++){
          
