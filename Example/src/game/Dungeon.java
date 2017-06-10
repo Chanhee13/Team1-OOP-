@@ -84,7 +84,7 @@ public class Dungeon extends JFrame {
          //
                }
            };
-
+//
       monster.setBorder(UIManager.getBorder("InternalFrame.border"));
       monster.setForeground(Color.WHITE);
       int stage = gameManager.getRecentStage();
