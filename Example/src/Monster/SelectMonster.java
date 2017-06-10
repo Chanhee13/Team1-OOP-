@@ -28,6 +28,7 @@ public class SelectMonster extends Monster{
 
 	@Override
 	public boolean isCorrect(Object o) {
+		System.out.println(o);
 		int userAnswer = (int) Hero.pickSolution(o);
 		return isCorrect(userAnswer);
 	}

@@ -13,6 +13,7 @@ public class Test2 {
 		   System.out.println(a.getAssingments().get(i).getProblem());
 		   System.out.println();
 		}
+		System.out.println(a.getAssingments().size());
 		
 		
 	}

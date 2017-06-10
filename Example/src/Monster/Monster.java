@@ -4,6 +4,9 @@ import Manage.gameManager;
 
 import java.util.*;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 public abstract class Monster {
 	static int i =0;
 	private String name = "monster "+i;
@@ -54,8 +57,8 @@ public abstract class Monster {
 
 	public String askProblem()
 	{
-		Assignment ass = assignments.get(prbNum);
-		return ass.getProblem();
+		String ass = assignments.get(gameManager.getRecentProblem()).getProblem();
+		return ass;
 	}
 	
 	public int getDeadCount() {
@@ -76,4 +79,5 @@ public abstract class Monster {
 
 	}
 	}
+	
 }

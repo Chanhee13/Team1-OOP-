@@ -41,6 +41,10 @@ import javax.swing.UIManager;
 public class Dungeon extends JFrame {
 
    private JPanel contentPane;
+   private static JTextArea textArea;
+   private Monster[] mons;
+   private static String next;
+   private Monster m;
    JButton btnNewButton = new JButton("Answer\n check");
 
    /**
@@ -74,7 +78,7 @@ public class Dungeon extends JFrame {
       
       JPanel problem = new JPanel();
       problem.setBorder(new TitledBorder(null, "Problem", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-      JTextArea textArea = new JTextArea();
+      textArea = new JTextArea();
       problem.add(textArea);
       Image img=new ImageIcon("java.png").getImage();
       
@@ -89,7 +93,7 @@ public class Dungeon extends JFrame {
       monster.setBorder(UIManager.getBorder("InternalFrame.border"));
       monster.setForeground(Color.WHITE);
       int stage = gameManager.getRecentStage();
-      Monster[] mons = FileManager.makeMonsters(stage);
+      mons = FileManager.makeMonsters(stage);
       
       btnNewButton.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent arg0) {
@@ -97,12 +101,17 @@ public class Dungeon extends JFrame {
          }
       });
       Information info = new Information(gameManager.getRecentStage());
+      System.out.println("스테이지 넘버: "+gameManager.getRecentStage());
       OXMonster ox = new OXMonster();
 		SelectMonster se = new SelectMonster();
 		TypeMonster ty = new TypeMonster();
 		
-		ArrayList<Assignment> as = info.getAssingments();
-		for(int i=0; i<as.size(); i++){
+		ArrayList<Assignment> as = new ArrayList<Assignment>(7);
+			as =info.getAssingments();
+			System.out.println(as.size());
+		System.out.println("----------------------------------------------------");
+		for(int i=0; i<7; i++){
+			System.out.println();
 			System.out.println(as.get(i).getProblem());
 			if(as.get(i) instanceof OXAssignment){
 				ox.addAssignment(as.get(i));
@@ -118,25 +127,30 @@ public class Dungeon extends JFrame {
 				System.out.println("TY");
 			}
 		}
-		
+		System.out.println("----------------------------------------------------");
 		mons[0] = ox;
 		mons[1] = se;
 		mons[2] = ty;
 		
 		         gameManager.setRecentMonster(mons[0]);
-		         Monster m = gameManager.getRecentMonster();
+		         m = gameManager.getRecentMonster();
 		         textArea.setText(m.askProblem());
 		         
 		            btnNewButton.addActionListener(new ActionListener() {
 		               public void actionPerformed(ActionEvent arg0) {
 		                  
 		                  if(m instanceof  SelectMonster){
+		                	  nextAssignment();
 		                     SelectCheckBox.main(null);
+		           
 		                  }
 		                  else if(m instanceof OXMonster){
+		                	  nextAssignment();
 		                     SelectOXBox.main(null);
+		                     
 		                  }
 		                  else if(m instanceof TypeMonster){
+		                	  nextAssignment();
 		                     SelectTypeBox.main(null);
 		                  }
 		      
@@ -171,5 +185,12 @@ public class Dungeon extends JFrame {
       );
       contentPane.setLayout(gl_contentPane);
    }
-   
+   void nextAssignment(){
+	   next = gameManager.nextAssignment(mons);
+	   System.out.println("pre"+next);
+   }
+   static void something(){
+	   textArea.setText(next);
+	   System.out.println("post"+next);
+   }
 }

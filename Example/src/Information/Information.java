@@ -14,8 +14,8 @@ import Dr.Dr_T;
 import Manage.gameManager;
 
 public class Information implements Serializable {
-
-
+   
+   private int numberofAs;
    private String ID;
    private String toTeach;
    private static ArrayList<Assignment> assingments = new ArrayList<Assignment>();
@@ -49,34 +49,36 @@ public class Information implements Serializable {
          //문제와 정답과 오답 설정
          String[] tempStr = result[2].split(",");
          
-    
+         setNumberofAs(preAssingments.length);
+   
+         
+         int i;
           // Assignment 추가
-         for(int i=0;i<tempStr.length;i++){
+         for(i=0;i<tempStr.length;i++){
         	 
         	 if(tempStr[i].equals("ox"))
         	 {
         		 if(tempStr[i+2].equals("O"))
-        			 assingments.add(new OXAssignment(1,tempStr[i+1],true));
+        			 assingments.add(new OXAssignment(gameManager.getRecentStage(),tempStr[i+1],true));
         		 else
-        			 assingments.add(new OXAssignment(1,tempStr[i+1],false));
+        			 assingments.add(new OXAssignment(gameManager.getRecentStage(),tempStr[i+1],false));
         	 }
         	 else if(tempStr[i].equals("\nox"))
         	 {
         		 if(tempStr[i+2].equals("O"))
-        			 assingments.add(new OXAssignment(1,tempStr[i+1],true));
+        			 assingments.add(new OXAssignment(gameManager.getRecentStage(),tempStr[i+1],true));
         		 else
-        			 assingments.add(new OXAssignment(1,tempStr[i+1],false));
+        			 assingments.add(new OXAssignment(gameManager.getRecentStage(),tempStr[i+1],false));
         	 }
         	 if(tempStr[i].equals("\nse"))
         	 {
         		 String[] wro = { tempStr[i+3], tempStr[i+4], tempStr[i+5] };
-        		 assingments.add(new SelectAssignment(2,tempStr[i+1],tempStr[i+2],wro));
+        		 assingments.add(new SelectAssignment(gameManager.getRecentStage(),tempStr[i+1],tempStr[i+2],wro));
         	 }
         	 if(tempStr[i].equals("\nty"))
         	 {
-        		 assingments.add(new TypeAssignment(3,tempStr[i+1],gameManager.getRecentTypeSolution()));
+        		 assingments.add(new TypeAssignment(gameManager.getRecentStage(),tempStr[i+1],gameManager.getRecentTypeSolution()));
         	 }
-        	 
          }
          
       
@@ -112,5 +114,17 @@ public class Information implements Serializable {
    public void setAssingments(ArrayList<Assignment> assingments) {
       this.assingments = assingments;
    }
+   
+
+  
+public void setNumberofAs(int numberofAs) {
+	this.numberofAs = numberofAs;
+}
+public int getNumberofAs() {
+	// TODO Auto-generated method stub
+	return 0;
+}
+   
+   
 
 }
