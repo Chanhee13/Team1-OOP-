@@ -84,12 +84,11 @@ public class gameManager {
 			gameManager.setRecentProblem(0);
 			System.out.println(gameManager.getRecentMonster());
 			if(gameManager.getRecentMonster() instanceof OXMonster){
+				System.out.println("monster changed : "+ mons[0]+" to "+mons[1]);
 				gameManager.setRecentMonster(mons[1]);
-				return gameManager.getRecentMonster().askProblem();
 			}
 			else if(gameManager.getRecentMonster() instanceof SelectMonster){
 				gameManager.setRecentMonster(mons[2]);
-				return gameManager.getRecentMonster().askProblem();
 			}
 			else if(gameManager.getRecentMonster() instanceof TypeMonster)
 			{

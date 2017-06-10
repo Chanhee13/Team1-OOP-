@@ -42,7 +42,7 @@ public class Dungeon extends JFrame {
 
    private JPanel contentPane;
    private static JTextArea textArea;
-   private Monster[] mons;
+   private static Monster[] mons;
    private static String next;
    private Monster m;
    JButton btnNewButton = new JButton("Answer\n check");
@@ -143,21 +143,21 @@ public class Dungeon extends JFrame {
 		            btnNewButton.addActionListener(new ActionListener() {
 		               public void actionPerformed(ActionEvent arg0) {
 		                  
+		            	  m = gameManager.getRecentMonster();
+		            	   
 		                  if(m instanceof  SelectMonster){
-		                	  nextAssignment();
 		                     SelectCheckBox.main(null);
-		           
+		                     
 		                  }
 		                  else if(m instanceof OXMonster){
-		                	  nextAssignment();
 		                     SelectOXBox.main(null);
 		                     
 		                  }
 		                  else if(m instanceof TypeMonster){
-		                	  nextAssignment();
 		                     SelectTypeBox.main(null);
+		                     
 		                  }
-		      
+		                  nextAssignment();
 		               }
 		               
 		            });
@@ -190,10 +190,11 @@ public class Dungeon extends JFrame {
       contentPane.setLayout(gl_contentPane);
    }
    void nextAssignment(){
-	   next = gameManager.nextAssignment(mons);
-	   System.out.println("pre"+next);
+	   
+	
    }
-   static void something(){
+   static void renderNextAs(){
+	   next = gameManager.nextAssignment(mons);
 	   textArea.setText(next);
 	   System.out.println("post"+next);
    }

@@ -108,7 +108,7 @@ public class SelectOXBox extends JFrame implements ActionListener {
 		
 		
 		if(bt.equals(btnOk)){
-			Dungeon.something();
+			Dungeon.renderNextAs();
 			this.dispose();;
 		}
 		
