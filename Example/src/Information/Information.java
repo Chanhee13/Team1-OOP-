@@ -46,23 +46,32 @@ public class Information implements Serializable {
          //문제와 정답과 오답 설정
          String[] tempStr = result[2].split(",");
          
+         /* 밑에 있는 부분은 수정된 Assignment의 추가입니다. Assignment 부분은 해결된것같습니다.
+          *  
+          * */
+          
          for(int i=0;i<tempStr.length;i++){
         	 
         	 if(tempStr[i].equals("ox"))
         	 {
-        		 assingments.add(new OXAssignment(1,tempStr[i+1],true));
+        		assingments.add(new OXAssignment(1,tempStr[i+1],true));
         	 }
         	 else if(tempStr[i].equals("\nox"))
         	 {
         		 assingments.add(new OXAssignment(1,tempStr[i+1],true));
         	 }
+        	 if(tempStr[i].equals("\nse"))
+        	 {
+        		 String[] wro = { tempStr[i+3], tempStr[i+4], tempStr[i+5] };
+        		 assingments.add(new SelectAssignment(2,tempStr[i+1],tempStr[i+2],wro));
+        	 }
+        	 if(tempStr[i].equals("\nty"))
+        	 {
+        		 assingments.add(new TypeAssignment(3,tempStr[i+1],"Test Solution"));
+        	 }
         	 
          }
          
-         
-         /*이부분은 for문을 통해서 addAssignment해야 되는 부분인데 for문이 돌지 않을 뿐더러
-          * 오류가 있어서 잠시 보류중입니다.
-          */
       
       } catch (FileNotFoundException e) {
          // TODO Auto-generated catch block

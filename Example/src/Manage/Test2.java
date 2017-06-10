@@ -11,7 +11,9 @@ public class Test2 {
 		for(int i=0;i<a.getAssingments().size();i++)
 		{
 		   System.out.println(a.getAssingments().get(i).getProblem());
+		   System.out.println();
 		}
+		
 		
 	}
 	

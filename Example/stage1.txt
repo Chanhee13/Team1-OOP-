@@ -17,7 +17,7 @@ such as yourDog,myDog,...
 &ox,Class is blueprint of an object,
 ox,If dog is a class then Chihuahua is a object,
 ox,Every Java program has at least one class with a main() method,
-se,What is state of objects?,instance variable,method,classes,function.
-se,Which of the following is not a primitive type?,String,int,double,boolean.
-ty,class is a (	) of an object and blueprint.
+se,What is state of objects?,instance variable,method,classes,function,
+se,Which of the following is not a primitive type?,String,int,double,boolean,
+ty,class is a (	) of an object and blueprint.,
 ty,(	) is a realization of the Class,object.
