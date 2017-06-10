@@ -123,8 +123,6 @@ public class Dungeon extends JFrame {
 		mons[1] = se;
 		mons[2] = ty;
 		
-		
-		         
 		         gameManager.setRecentMonster(mons[0]);
 		         Monster m = gameManager.getRecentMonster();
 		         textArea.setText(m.askProblem());
@@ -143,6 +141,7 @@ public class Dungeon extends JFrame {
 		                  }
 		      
 		               }
+		               
 		            });
 		         
 		  

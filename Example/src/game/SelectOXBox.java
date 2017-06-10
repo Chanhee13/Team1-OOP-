@@ -90,15 +90,22 @@ public class SelectOXBox extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		
 		Object bt = e.getSource();
-		System.out.println(bt.toString());
 		
 		if(rdbtnTrue.isSelected()){
+			
 			gameManager.setRecentOXSolution(true);
 		}else if(rdbtnFalse.isSelected()){
 			gameManager.setRecentOXSolution(false);
 		}else{
 			System.out.println("Not Checked");
 		}
+		if(gameManager.getRecentMonster().isCorrect(gameManager.isRecentOXSolution()))
+		{
+			System.out.println("Your answer is right!");
+		}
+		else
+			System.out.println("Not Answer!");
+		
 		
 		if(bt.equals(btnOk)){
 			this.dispose();;
