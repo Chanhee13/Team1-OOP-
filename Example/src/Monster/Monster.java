@@ -58,8 +58,6 @@ public abstract class Monster {
 
 	abstract public boolean isCorrect(Object o);
 
-	
-	
 	public boolean isDead() {
 		if( this.getHP() <= 0) {
 			return true;
@@ -67,17 +65,5 @@ public abstract class Monster {
 		else {
 			return false;
 		}
-
-	
-		int cnt=0;
-		for (Monster m : Monsters){
-		   if(m.isDead()){
-		      cnt++;
-		   }
-		}
-		
-		
 	}
-	
-	
 }
