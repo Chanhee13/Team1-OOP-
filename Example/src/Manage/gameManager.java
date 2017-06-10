@@ -7,11 +7,17 @@ import javax.swing.JOptionPane;
 
 import Information.Assignment;
 import Monster.Monster;
+
 import Monster.OXMonster;
 import Monster.SelectMonster;
 import Monster.TypeMonster;
 
+import User.Hero;
+
+
 public class gameManager {
+	static Hero hero=new Hero();
+	static private Hero recentHero= hero;
 	static private int recentStage;
 	static private Monster recentMonster;
 	static private int recentProblem;
@@ -54,6 +60,13 @@ public class gameManager {
 	public static void setRecentProblem(int recentProblem) {
 		gameManager.recentProblem = recentProblem;
 	}
+	public static Hero getRecentHero() {
+		return recentHero;
+	}
+	public static void setRecentHero(Hero recentHero) {
+		gameManager.recentHero = recentHero;
+	}
+
 	
 	public static String nextAssignment(Monster[] mons){
 		

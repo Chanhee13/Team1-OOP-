@@ -79,7 +79,7 @@ public class FileManager {
 				OXMonster ox = new OXMonster();
 				SelectMonster se = new SelectMonster();
 				TypeMonster ty = new TypeMonster();
-				Information info = new Information(stage);
+				Information info = new Information(stage+1);
 				ArrayList<Assignment> as = info.getAssingments();
 				System.out.println(as.toString());
 				for(int i=0; i<as.size(); i++){

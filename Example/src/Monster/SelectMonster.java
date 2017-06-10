@@ -15,16 +15,24 @@ public class SelectMonster extends Monster{
 			sol = ((SelectAssignment)ass).getSolutionNum();
 		}else{
 			System.out.println("this Assignmentis not SelectAssignment");
+		
+		
+			
 			return false;
 		}
 		
 		
 		if(userAnswer == sol) {
 			this.setHP(this.getHP()-10);
+			System.out.println("User's Solution is Correct.");
 			return true;
 		}
-		else return false;
-	}
+		else 
+			{Hero recentHero = null;
+			gameManager.getRecentHero().setHP(getHP() - 10);
+			System.out.println("User's Solution is NOT Correct.");
+			return false;
+	}}
 
 	@Override
 	public boolean isCorrect(Object o) {
