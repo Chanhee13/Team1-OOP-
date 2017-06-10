@@ -13,6 +13,8 @@ import java.util.ArrayList;
 import Dr.Dr_T;
 
 public class Information implements Serializable {
+
+
    private String ID;
    private String toTeach;
    private static ArrayList<Assignment> assingments = new ArrayList<Assignment>();
@@ -46,9 +48,7 @@ public class Information implements Serializable {
          //문제와 정답과 오답 설정
          String[] tempStr = result[2].split(",");
          
-         /* 밑에 있는 부분은 수정된 Assignment의 추가입니다. Assignment 부분은 해결된것같습니다.
-          *  
-          * */
+    
           
          for(int i=0;i<tempStr.length;i++){
         	 

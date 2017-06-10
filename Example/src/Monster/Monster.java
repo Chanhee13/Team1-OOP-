@@ -66,6 +66,8 @@ public abstract class Monster {
 		}
 		else {
 			return false;
-		}
+		}	
 	}
+	
+	
 }
