@@ -43,7 +43,7 @@ public class Dungeon extends JFrame {
 
    private JPanel contentPane;
    JButton btnNewButton = new JButton("Answer\n check");
-
+   Hero hero=new Hero();
    /**
     * Launch the application.
     */

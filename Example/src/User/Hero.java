@@ -6,7 +6,8 @@ public class Hero {
 	private String Name;
 	private boolean Gender; 
 	private int HP = 50;
-
+	
+	
 	public void setName(String name) {
 		if(name!=null)Name = name;
 	}
