@@ -36,7 +36,7 @@ public class Information implements Serializable {
          result = copytext.split("&");
          //스테이지 지정
       
-         System.out.println(result[1]);
+     
          result[0].trim();
          setID(result[0]);
          //가르칠 내용 지정
@@ -45,6 +45,21 @@ public class Information implements Serializable {
          String[] preAssingments = result[2].split(".");
          //문제와 정답과 오답 설정
          String[] tempStr = result[2].split(",");
+         
+         for(int i=0;i<tempStr.length;i++){
+        	 
+        	 if(tempStr[i].equals("ox"))
+        	 {
+        		 assingments.add(new OXAssignment(1,tempStr[i+1],true));
+        	 }
+        	 else if(tempStr[i].equals("\nox"))
+        	 {
+        		 assingments.add(new OXAssignment(1,tempStr[i+1],true));
+        	 }
+        	 
+         }
+         
+         
          /*이부분은 for문을 통해서 addAssignment해야 되는 부분인데 for문이 돌지 않을 뿐더러
           * 오류가 있어서 잠시 보류중입니다.
           */
