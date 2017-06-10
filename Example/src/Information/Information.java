@@ -9,8 +9,9 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
-
+import game.*;
 import Dr.Dr_T;
+import Manage.gameManager;
 
 public class Information implements Serializable {
 
@@ -54,11 +55,17 @@ public class Information implements Serializable {
         	 
         	 if(tempStr[i].equals("ox"))
         	 {
-        		assingments.add(new OXAssignment(1,tempStr[i+1],true));
+        		 if(tempStr[i+2].equals("O"))
+        			 assingments.add(new OXAssignment(1,tempStr[i+1],true));
+        		 else
+        			 assingments.add(new OXAssignment(1,tempStr[i+1],false));
         	 }
         	 else if(tempStr[i].equals("\nox"))
         	 {
-        		 assingments.add(new OXAssignment(1,tempStr[i+1],true));
+        		 if(tempStr[i+2].equals("O"))
+        			 assingments.add(new OXAssignment(1,tempStr[i+1],true));
+        		 else
+        			 assingments.add(new OXAssignment(1,tempStr[i+1],false));
         	 }
         	 if(tempStr[i].equals("\nse"))
         	 {
@@ -67,7 +74,7 @@ public class Information implements Serializable {
         	 }
         	 if(tempStr[i].equals("\nty"))
         	 {
-        		 assingments.add(new TypeAssignment(3,tempStr[i+1],"Test Solution"));
+        		 assingments.add(new TypeAssignment(3,tempStr[i+1],gameManager.getRecentTypeSolution()));
         	 }
         	 
          }

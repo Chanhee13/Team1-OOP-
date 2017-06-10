@@ -22,6 +22,7 @@ import javax.swing.border.TitledBorder;
 
 import Dr.Dr_T;
 import Information.Assignment;
+import Information.Information;
 import Information.OXAssignment;
 import Information.SelectAssignment;
 import Information.TypeAssignment;
@@ -58,7 +59,7 @@ public class Dungeon extends JFrame {
          }
       });
    }
-
+   
    /**
     * Create the frame.
     */
@@ -94,33 +95,57 @@ public class Dungeon extends JFrame {
          public void actionPerformed(ActionEvent arg0) {
 
          }
-      });//
-      /*/
-       *   몬스터 만들어서 문제만드는 거 실패 
-      for(int i=0; i<3; i++){
-         
-         gameManager.setRecentMonster(mons[i]);
-         Monster m = gameManager.getRecentMonster();
-         textArea.setText(m.askProblem());
-         while(!m.isDead()){
-            btnNewButton.addActionListener(new ActionListener() {
-               public void actionPerformed(ActionEvent arg0) {
-                  
-                  if(m instanceof   SelectMonster){
-                     SelectCheckBox.main(null);
-                  }
-                  else if(m instanceof OXMonster){
-                     SelectOXBox.main(null);
-                  }
-                  else if(m instanceof TypeMonster){
-                     SelectTypeBox.main(null);
-                  }
-      
-               }
-            });
-         }
-      }
-      */
+      });
+      Information info = new Information(gameManager.getRecentStage());
+      OXMonster ox = new OXMonster();
+		SelectMonster se = new SelectMonster();
+		TypeMonster ty = new TypeMonster();
+		
+		ArrayList<Assignment> as = info.getAssingments();
+		for(int i=0; i<as.size(); i++){
+			System.out.println(as.get(i).getProblem());
+			if(as.get(i) instanceof OXAssignment){
+				ox.addAssignment(as.get(i));
+				ox.setHP(ox.getHP()+10);
+				System.out.println("OX");
+			}else if(as.get(i) instanceof SelectAssignment){
+				se.addAssignment(as.get(i));
+				se.setHP(se.getHP()+10);
+				System.out.println("SE");
+			}else if(as.get(i) instanceof TypeAssignment){
+				ty.addAssignment(as.get(i));
+				ty.setHP(ty.getHP()+10);
+				System.out.println("TY");
+			}
+		}
+		
+		mons[0] = ox;
+		mons[1] = se;
+		mons[2] = ty;
+		
+		
+		         
+		         gameManager.setRecentMonster(mons[0]);
+		         Monster m = gameManager.getRecentMonster();
+		         textArea.setText(m.askProblem());
+		         
+		            btnNewButton.addActionListener(new ActionListener() {
+		               public void actionPerformed(ActionEvent arg0) {
+		                  
+		                  if(m instanceof  SelectMonster){
+		                     SelectCheckBox.main(null);
+		                  }
+		                  else if(m instanceof OXMonster){
+		                     SelectOXBox.main(null);
+		                  }
+		                  else if(m instanceof TypeMonster){
+		                     SelectTypeBox.main(null);
+		                  }
+		      
+		               }
+		            });
+		         
+		  
       GroupLayout gl_contentPane = new GroupLayout(contentPane);
       gl_contentPane.setHorizontalGroup(
          gl_contentPane.createParallelGroup(Alignment.LEADING)

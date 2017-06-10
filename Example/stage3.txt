@@ -1,4 +1,4 @@
-1
+3
 &What is Object and Class?
 
 Class is blueprint of an object. 

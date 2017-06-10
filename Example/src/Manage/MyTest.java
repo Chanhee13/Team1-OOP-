@@ -68,7 +68,7 @@ public class MyTest {
 		
 		ArrayList<Assignment> as = info.getAssingments();
 		for(int i=0; i<as.size(); i++){
-			System.out.println(as.get(i));
+			System.out.println(as.get(i).getProblem());
 			if(as.get(i) instanceof OXAssignment){
 				ox.addAssignment(as.get(i));
 				ox.setHP(ox.getHP()+10);

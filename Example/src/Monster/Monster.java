@@ -9,12 +9,15 @@ public abstract class Monster {
 	private String name = "monster "+i;
 	private int HP=0;
 	private int damage=5;
+	private int deadCount=0;
 	private ArrayList<Assignment> assignments = new ArrayList<Assignment> ();
 	private int prbNum=0;
 	
 	Monster(){
 		i++;
 	}
+	
+	
 	public void addAssignment(Assignment e){
 		assignments.add(e);
 	}
@@ -55,7 +58,13 @@ public abstract class Monster {
 		return ass.getProblem();
 	}
 	
+	public int getDeadCount() {
+		return deadCount;
+	}
 
+	public void setDeadCount(int deadCount) {
+		this.deadCount = deadCount;
+	}
 	abstract public boolean isCorrect(Object o);
 
 	public boolean isDead() {
@@ -65,5 +74,6 @@ public abstract class Monster {
 		else {
 			return false;
 
+	}
 	}
 }
