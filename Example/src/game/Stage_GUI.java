@@ -182,5 +182,9 @@ public class Stage_GUI extends User implements ActionListener{
 		StageNumber = stageNumber;
 	}
 	
-
+	
+	public static void main(String[] args) {
+		Stage_GUI gui = new Stage_GUI();
+		gui.stage("name");
+	}
 }
