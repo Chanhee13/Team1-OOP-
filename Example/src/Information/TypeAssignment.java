@@ -13,6 +13,9 @@ public class TypeAssignment extends Assignment {
 	}
 
 	public void setSolution(String solution) {
+		if(solution!=null){
+			solution=solution.toLowerCase();
+		}
 		this.solution = solution;
 	}
 	

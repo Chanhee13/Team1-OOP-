@@ -77,7 +77,8 @@ public class Information implements Serializable {
         	 }
         	 if(tempStr[i].equals("\nty"))
         	 {
-        		 assingments.add(new TypeAssignment(gameManager.getRecentStage(),tempStr[i+1],gameManager.getRecentTypeSolution()));
+      
+        		 assingments.add(new TypeAssignment(gameManager.getRecentStage(),tempStr[i+1],tempStr[i+2]));
         	 }
          }
          

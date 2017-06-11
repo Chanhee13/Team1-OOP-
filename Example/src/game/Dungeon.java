@@ -157,7 +157,6 @@ public class Dungeon extends JFrame {
 		                     SelectTypeBox.main(null);
 		                     
 		                  }
-		                  nextAssignment();
 		               }
 		               
 		            });
@@ -189,10 +188,7 @@ public class Dungeon extends JFrame {
       );
       contentPane.setLayout(gl_contentPane);
    }
-   void nextAssignment(){
-	   
-	
-   }
+
    static void renderNextAs(){
 	   next = gameManager.nextAssignment(mons);
 	   textArea.setText(next);

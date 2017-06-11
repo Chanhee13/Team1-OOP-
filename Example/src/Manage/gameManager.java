@@ -22,19 +22,29 @@ public class gameManager {
 	static private Monster recentMonster;
 	static private int recentProblem;
 	static private boolean recentOXSolution;
-	static private int recentSelectSolution;
+	static private String recentSelectSolution;
 	static private String recentTypeSolution;
+	static private Assignment recentAssignment;
+	
+	
+	
+	public static Assignment getRecentAssignment() {
+		return recentAssignment;
+	}
+	public static void setRecentAssignment(Assignment recentAssignment) {
+		gameManager.recentAssignment = recentAssignment;
+	}
 	public static boolean isRecentOXSolution() {
 		return recentOXSolution;
 	}
 	public static void setRecentOXSolution(boolean recentOXSolution) {
 		gameManager.recentOXSolution = recentOXSolution;
 	}
-	public static int getRecentSelectSolution() {
+	public static String getRecentSelectSolution() {
 		return recentSelectSolution;
 	}
-	public static void setRecentSelectSolution(int recentSelectSolution) {
-		gameManager.recentSelectSolution = recentSelectSolution;
+	public static void setRecentSelectSolution(String sol) {
+		gameManager.recentSelectSolution = sol;
 	}
 	public static String getRecentTypeSolution() {
 		return recentTypeSolution;

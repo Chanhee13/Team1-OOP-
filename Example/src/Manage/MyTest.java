@@ -100,7 +100,7 @@ public class MyTest {
 		}
 		for(int i=0; i<se.getAssignment().size(); i++){
 			se.askProblem();
-			if(se.isCorrect((int)Hero.pickSolution(0))){
+			if(se.isCorrect(Hero.pickSolution("sol"))){
 				System.out.println("Good!");
 				ox.setHP(ox.getHP()-10);
 			}else{

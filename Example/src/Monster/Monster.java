@@ -79,5 +79,15 @@ public abstract class Monster {
 
 	}
 	}
+
+
+	public int getPrbNum() {
+		return prbNum;
+	}
+
+
+	public void setPrbNum(int prbNum) {
+		this.prbNum = prbNum;
+	}
 	
 }

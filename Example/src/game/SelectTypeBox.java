@@ -82,8 +82,11 @@ public class SelectTypeBox extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		gameManager.setRecentTypeSolution(textField.getText());
+		
+		gameManager.setRecentTypeSolution(textField.getText().toLowerCase());
+		System.out.println("User Answer: "+textField.getText().toLowerCase());
 		gameManager.getRecentMonster().isCorrect(gameManager.getRecentTypeSolution());
+		
 		
 		if(e.getSource()==btnOk)
 		{

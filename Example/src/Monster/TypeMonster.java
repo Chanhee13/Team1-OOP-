@@ -12,22 +12,14 @@ public class TypeMonster extends Monster {
 		int prb = gameManager.getRecentProblem();
 		String sol;
 		Assignment ass = this.getAssignment().get(prb);
-		if (ass instanceof TypeAssignment) {
-			sol = ((TypeAssignment) ass).getSolution();
-
-		} else {
-			System.out.println("this Assignmentis not TypeAssignment");
-
-			return false;
-		}
-
-		if (userAnswer == sol) {
-
+		sol = ((TypeAssignment) ass).getSolution();
+		//정답확인
+		System.out.println("Solution: "+sol); //왜 솔루션이 null이지? 
+		if (userAnswer.equals(sol)) {
 			this.setHP(this.getHP() - 10);
 			System.out.println("User's Solution is Correct.");
 			return true;
 		} else {
-			Hero recentHero = null;
 			gameManager.getRecentHero().setHP(getHP() - 10);
 			System.out.println("User's Solution is NOT Correct.");
 			return false;
