@@ -222,7 +222,7 @@ public class Main extends JFrame implements ActionListener{
 							boolean[] cleared = new boolean[3];
 							cleared[0]=true;
 							cleared[1]=true;
-							cleared[2]=true;
+							cleared[2]=false;
 							
 							u.setCleared(cleared);
 							//유저 설정
