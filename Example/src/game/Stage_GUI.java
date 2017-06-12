@@ -114,6 +114,7 @@ public class Stage_GUI extends User implements ActionListener{
 			Stage2.setBackground(Color.GRAY);
 			gameManager.setRecentStage(2);
 			Dungeon D1 = new Dungeon(frame);
+			frame.setVisible(false);
 			//D1.main(null);
 			
 		}
@@ -123,6 +124,7 @@ public class Stage_GUI extends User implements ActionListener{
 			Stage3.setBackground(Color.GRAY);
 			gameManager.setRecentStage(3);
 			Dungeon D1 = new Dungeon(frame);
+			frame.setVisible(false);
 			//D1.main(null);
 		}
 		
@@ -131,6 +133,7 @@ public class Stage_GUI extends User implements ActionListener{
 			Stage4.setBackground(Color.GRAY);
 			gameManager.setRecentStage(4);
 			Dungeon D1 = new Dungeon(frame);
+			frame.setVisible(false);
 			//D1.main(null);
 		}
 		
@@ -139,6 +142,7 @@ public class Stage_GUI extends User implements ActionListener{
 			Stage5.setBackground(Color.GRAY);
 			gameManager.setRecentStage(5);
 			Dungeon D1 = new Dungeon(frame);
+			frame.setVisible(false);
 			//D1.main(null);
 		}
 		
@@ -147,14 +151,16 @@ public class Stage_GUI extends User implements ActionListener{
 			Stage6.setBackground(Color.GRAY);
 			gameManager.setRecentStage(6);
 			Dungeon D1 = new Dungeon(frame);
+			frame.setVisible(false);
 			//D1.main(null);
 		}
 		
 		if(bt == Stage7)
 		{
-			Stage6.setBackground(Color.GRAY);
+			Stage7.setBackground(Color.GRAY);
 			gameManager.setRecentStage(7);
 			Dungeon D1 = new Dungeon(frame);
+			frame.setVisible(false);
 			//D1.main(null);
 		}
 		
@@ -163,6 +169,7 @@ public class Stage_GUI extends User implements ActionListener{
 			Stage8.setBackground(Color.GRAY);
 			gameManager.setRecentStage(8);
 			Dungeon D1 = new Dungeon(frame);
+			frame.setVisible(false);
 			//D1.main(null);
 		}
 //		Teaching.main(null);
