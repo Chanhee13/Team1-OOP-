@@ -9,6 +9,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
+
+import com.sun.xml.internal.ws.util.StringUtils;
+
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.GroupLayout;
@@ -225,6 +228,17 @@ public class Main extends JFrame implements ActionListener{
 				
 				setId(textField.getText());
 				setPassword(passwordField.getText());
+				
+				String str1 = " ";
+				
+				boolean com = id.contains(str1);
+				
+				if(textField.getText().length() <= 2 || passwordField.getText().length() <= 2 || com == true) {
+					JOptionPane.showMessageDialog(null, "Your ID or Password is too short.\nIf not, please don't leave blanks in the ID.");
+					textField.setText("");
+					passwordField.setText("");
+					return;
+				}
 				
 				int row = 0;
 				int i = 0;
