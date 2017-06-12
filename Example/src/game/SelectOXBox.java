@@ -93,6 +93,7 @@ public class SelectOXBox extends JFrame implements ActionListener {
 		
 		if(rdbtnTrue.isSelected()){
 			gameManager.setRecentOXSolution(true);
+
 		}else if(rdbtnFalse.isSelected()){
 			gameManager.setRecentOXSolution(false);
 		}else{

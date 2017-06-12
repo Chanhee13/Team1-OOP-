@@ -138,11 +138,11 @@ public class SelectCheckBox extends JFrame implements ActionListener{
 		if(rdbbtn1.isSelected()){
 			gameManager.setRecentSelectSolution(sol);
 		}else if(rdbbtn2.isSelected()){
-			gameManager.setRecentSelectSolution(wor[1]);
+			gameManager.setRecentSelectSolution(wor[0]);
 		}else if(rdbbtn3.isSelected()){
-			gameManager.setRecentSelectSolution(wor[2]);
+			gameManager.setRecentSelectSolution(wor[1]);
 		}else if(rdbbtn4.isSelected()){
-			gameManager.setRecentSelectSolution(wor[3]);
+			gameManager.setRecentSelectSolution(wor[2]);
 		}else{
 			System.out.println("Not Checked");
 		}
