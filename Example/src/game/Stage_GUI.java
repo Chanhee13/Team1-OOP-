@@ -35,9 +35,7 @@ public class Stage_GUI extends User implements ActionListener{
 	public void stage(String name)
 	{
 		
-		
-		
-		frame.setSize(470, 700);
+		frame.setSize(470, 300);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.setLayout(null);
 		
@@ -58,6 +56,7 @@ public class Stage_GUI extends User implements ActionListener{
 		Stage3.setLocation(120, 200);
 		Stage3.setSize(210, 60);
 		
+		/*
 		frame.add(Stage4);
 		Stage4.setLocation(120, 270);
 		Stage4.setSize(210, 60);
@@ -77,15 +76,20 @@ public class Stage_GUI extends User implements ActionListener{
 		frame.add(Stage8);
 		Stage8.setLocation(120, 550);
 		Stage8.setSize(210, 60);
+		*/
+		
 		
 		Stage1.addActionListener(this);
 		Stage2.addActionListener(this);
 		Stage3.addActionListener(this);
+		
+		/*
 		Stage4.addActionListener(this);
 		Stage5.addActionListener(this);
 		Stage6.addActionListener(this);
 		Stage7.addActionListener(this);
 		Stage8.addActionListener(this);
+		*/
 		
 		frame.setVisible(true);
 		frame.setResizable(false);
@@ -127,7 +131,7 @@ public class Stage_GUI extends User implements ActionListener{
 			frame.setVisible(false);
 			//D1.main(null);
 		}
-		
+		/*
 		if(bt == Stage4)
 		{
 			Stage4.setBackground(Color.GRAY);
@@ -172,8 +176,10 @@ public class Stage_GUI extends User implements ActionListener{
 			frame.setVisible(false);
 			//D1.main(null);
 		}
+		*/
 //		Teaching.main(null);
 	}
+	
 	private int StageNumber;
 	Monster[] monster = new Monster[24];
 
