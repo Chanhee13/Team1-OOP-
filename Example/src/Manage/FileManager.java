@@ -74,14 +74,13 @@ public class FileManager {
 		System.out.println("Test loading : " + this.f);
 	}
 	public static Monster[] makeMonsters(int stage){
-		//------------------------------ In Stage, Monster vs. Hero Test
-				System.out.println("---------------Monster vs. Hero TEST---------------");
+		
+				System.out.println("---------------Make Monsetrs : STAGE "+stage+"---------------");
 				OXMonster ox = new OXMonster();
 				SelectMonster se = new SelectMonster();
 				TypeMonster ty = new TypeMonster();
-				Information info = new Information(stage+1);
+				Information info = new Information(stage);
 				ArrayList<Assignment> as = info.getAssingments();
-				System.out.println(as.toString());
 				for(int i=0; i<as.size(); i++){
 					System.out.println(as.get(i));
 					if(as.get(i) instanceof OXAssignment){

@@ -7,14 +7,10 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JPanel;
-import javax.swing.BorderFactory;
-import javax.swing.BoxLayout;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.border.TitledBorder;
 
-import Manage.MyTest;
 import Manage.gameManager;
 
 import javax.swing.JLabel;
@@ -103,11 +99,13 @@ public class Stage_GUI extends User implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e){ 
 		Object bt = e.getSource();
-		MyTest.main(null);
+		
 		if(bt == Stage1)
 		{
 			//Stage1.setBackground(Color.GRAY);
 			gameManager.setRecentStage(1);
+			System.out.println("===================지금 스테이지는====================");
+			System.out.println("++++++++"+gameManager.getRecentStage()+"+++++++++++++");
 			Dungeon D1 = new Dungeon(frame);
 			frame.setVisible(false);
 			//D1.main(null);
@@ -119,6 +117,8 @@ public class Stage_GUI extends User implements ActionListener{
 			//Stage2.setBackground(Color.GRAY);
 			if(gameManager.getRecnetUser().isCleared(1)){
 				gameManager.setRecentStage(2);
+				System.out.println("===================지금 스테이지는====================");
+				System.out.println("++++++++"+gameManager.getRecentStage()+"+++++++++++++");
 				Dungeon D1 = new Dungeon(frame);
 				frame.setVisible(false);
 			}else{
@@ -134,6 +134,8 @@ public class Stage_GUI extends User implements ActionListener{
 			//Stage3.setBackground(Color.GRAY);
 			if(gameManager.getRecnetUser().isCleared(2)){
 				gameManager.setRecentStage(3);
+				System.out.println("===================지금 스테이지는====================");
+				System.out.println("++++++++"+gameManager.getRecentStage()+"+++++++++++++");
 				Dungeon D1 = new Dungeon(frame);
 				frame.setVisible(false);
 			}else{
@@ -222,8 +224,6 @@ public class Stage_GUI extends User implements ActionListener{
 			Stage3.setBackground(Color.GRAY);
 		}
 	}
-	
-	
 	
 	public static void main(String[] args) {
 		Stage_GUI gui = new Stage_GUI();
