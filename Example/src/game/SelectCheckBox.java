@@ -86,13 +86,13 @@ public class SelectCheckBox extends JFrame implements ActionListener{
 		rdbbtn1 = new JRadioButton("1. "+sol);
 		buttonGroup.add(rdbbtn1);
 		
-		rdbbtn2 = new JRadioButton("2"+wor[0]);
+		rdbbtn2 = new JRadioButton("2. "+wor[0]);
 		buttonGroup.add(rdbbtn2);
 		
-		rdbbtn3 = new JRadioButton("3"+wor[1]);
+		rdbbtn3 = new JRadioButton("3. "+wor[1]);
 		buttonGroup.add(rdbbtn3);
 		
-		rdbbtn4 = new JRadioButton("4"+wor[2]);
+		rdbbtn4 = new JRadioButton("4. "+wor[2]);
 		buttonGroup.add(rdbbtn4);
 		
 		btnOk = new JButton("OK");

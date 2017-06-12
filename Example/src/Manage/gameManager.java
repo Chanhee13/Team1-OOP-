@@ -13,7 +13,7 @@ import Monster.SelectMonster;
 import Monster.TypeMonster;
 
 import User.Hero;
-
+import game.*;
 
 public class gameManager {
 	static Hero hero=new Hero();
@@ -103,7 +103,6 @@ public class gameManager {
 			else if(gameManager.getRecentMonster() instanceof TypeMonster)
 			{
 				JOptionPane.showMessageDialog(new JFrame(), "Good");
-				return "good!";
 			}
 		}
 		return gameManager.getRecentMonster().askProblem();

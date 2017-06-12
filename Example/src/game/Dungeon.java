@@ -35,6 +35,9 @@ import User.Hero;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.UIManager;
@@ -48,34 +51,39 @@ public class Dungeon extends JFrame {
    private Monster m;
    static JButton  btnNewButton = new JButton("Answer\n check");
    static Hero hero=new Hero();
+   
+   JFrame parent;
 
    /**
     * Launch the application.
     */
-   public static void main(String[] args) {
-	
-	  gameManager.setRecentHero(hero);
-      EventQueue.invokeLater(new Runnable() {
-         public void run() {
-            try {
-               Dungeon frame = new Dungeon();
-               frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-               frame.setVisible(true);
-            } catch (Exception e) {
-               e.printStackTrace();
-            }
-         }
-      });
-   }
-   
+
+//   public static void main(String[] args) {
+//	
+//	   gameManager.setRecentHero(hero);
+//      EventQueue.invokeLater(new Runnable() {
+//         public void run() {
+//            try {
+//               Dungeon frame = new Dungeon();
+//              
+//            } catch (Exception e) {
+//               e.printStackTrace();
+//            }
+//         }
+//      });
+//   }
+
    /**
     * Create the frame.
     */
-   public Dungeon() {
-	   
+   public Dungeon(JFrame parent) {
+	   this.parent = parent;
+	   this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+       
+       this.setVisible(true);
       setTitle("Fight!");
       setBackground(Color.PINK);
-      setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//      setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setBounds(100, 100, 982, 493);
       contentPane = new JPanel();
       contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -162,7 +170,7 @@ public class Dungeon extends JFrame {
 		               
 		            });
 		         
-		  
+		
       GroupLayout gl_contentPane = new GroupLayout(contentPane);
       gl_contentPane.setHorizontalGroup(
          gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -188,9 +196,25 @@ public class Dungeon extends JFrame {
                .addContainerGap())
       );
       contentPane.setLayout(gl_contentPane);
-   }
+      
+      //show teaching frame
+      Teaching t = new Teaching();
+      
+      this.addWindowListener(new WindowAdapter() {
 
-   static void renderNextAs(){
+	
+		@Override
+		public void windowClosing(WindowEvent e) {
+			parent.setVisible(true);
+			
+		}
+		
+	
+		
+	});
+      
+   }
+ static void renderNextAs(){
 	   next = gameManager.nextAssignment(mons);
 	 
 	   System.out.println("------------------------Hero's HP----------------\n"+gameManager.getRecentHero().getHP());

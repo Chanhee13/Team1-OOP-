@@ -103,8 +103,9 @@ public class Stage_GUI extends User implements ActionListener{
 		{
 			Stage1.setBackground(Color.GRAY);
 			gameManager.setRecentStage(1);
-			Dungeon D1 = new Dungeon();
-			D1.main(null);
+			Dungeon D1 = new Dungeon(frame);
+			frame.setVisible(false);
+			//D1.main(null);
 			
 		}
 		
@@ -112,8 +113,8 @@ public class Stage_GUI extends User implements ActionListener{
 		{	
 			Stage2.setBackground(Color.GRAY);
 			gameManager.setRecentStage(2);
-			Dungeon D1 = new Dungeon();
-			D1.main(null);
+			Dungeon D1 = new Dungeon(frame);
+			//D1.main(null);
 			
 		}
 		
@@ -121,50 +122,50 @@ public class Stage_GUI extends User implements ActionListener{
 		{
 			Stage3.setBackground(Color.GRAY);
 			gameManager.setRecentStage(3);
-			Dungeon D1 = new Dungeon();
-			D1.main(null);
+			Dungeon D1 = new Dungeon(frame);
+			//D1.main(null);
 		}
 		
 		if(bt == Stage4)
 		{
 			Stage4.setBackground(Color.GRAY);
 			gameManager.setRecentStage(4);
-			Dungeon D1 = new Dungeon();
-			D1.main(null);
+			Dungeon D1 = new Dungeon(frame);
+			//D1.main(null);
 		}
 		
 		if(bt == Stage5)
 		{
 			Stage5.setBackground(Color.GRAY);
 			gameManager.setRecentStage(5);
-			Dungeon D1 = new Dungeon();
-			D1.main(null);
+			Dungeon D1 = new Dungeon(frame);
+			//D1.main(null);
 		}
 		
 		if(bt == Stage6)
 		{
 			Stage6.setBackground(Color.GRAY);
 			gameManager.setRecentStage(6);
-			Dungeon D1 = new Dungeon();
-			D1.main(null);
+			Dungeon D1 = new Dungeon(frame);
+			//D1.main(null);
 		}
 		
 		if(bt == Stage7)
 		{
 			Stage6.setBackground(Color.GRAY);
 			gameManager.setRecentStage(7);
-			Dungeon D1 = new Dungeon();
-			D1.main(null);
+			Dungeon D1 = new Dungeon(frame);
+			//D1.main(null);
 		}
 		
 		if(bt == Stage8)
 		{
 			Stage8.setBackground(Color.GRAY);
 			gameManager.setRecentStage(8);
-			Dungeon D1 = new Dungeon();
-			D1.main(null);
+			Dungeon D1 = new Dungeon(frame);
+			//D1.main(null);
 		}
-		Teaching.main(null);
+//		Teaching.main(null);
 	}
 	private int StageNumber;
 	Monster[] monster = new Monster[24];
