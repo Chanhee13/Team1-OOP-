@@ -1,4 +1,4 @@
-package Main;
+package game;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -9,9 +9,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
-
-import game.Stage_GUI;
-
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.GroupLayout;
@@ -172,7 +169,7 @@ public class Main extends JFrame implements ActionListener{
 				setId(textField.getText());
 				setPassword(passwordField.getText());
 				
-				if(textField.getText().length() <= 2 || passwordField.getText().length() <= 2) {
+				if(textField.getText().length() <= 0 || passwordField.getText().length() <= 0) {
 					JOptionPane.showMessageDialog(null, "Your ID and Password is too short!!\n Please write it again.");
 					textField.setText("");
 					passwordField.setText("");
