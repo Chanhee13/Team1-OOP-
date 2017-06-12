@@ -22,6 +22,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -74,8 +75,6 @@ public class Main extends JFrame implements ActionListener{
 					frame2.setVisible(true);
 					frame2.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 					frame2.setResizable(false);
-					frame2.setAlwaysOnTop(true);
-				
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -116,7 +115,7 @@ public class Main extends JFrame implements ActionListener{
 		passwordField = new JPasswordField();
 		passwordField.setFont(new Font("±¼¸²", Font.PLAIN, 14));
 		
-		btnCancel = new JButton("Cancel");
+		btnCancel = new JButton("Close");
 		
 		btnReset = new JButton("Reset");
 		GroupLayout gl_panel = new GroupLayout(panel);
@@ -170,9 +169,49 @@ public class Main extends JFrame implements ActionListener{
 		
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
-				Stage_GUI gui = new Stage_GUI();
-				gui.stage(textField.getText());
-				frame2.dispose();
+				Main ja = new Main();
+				ja.setId(textField.getText());
+				ja.setPassword(passwordField.getText());
+				String[][] data2 = new String[100][3];
+				int row = 0;
+				
+				try {
+					File path = new File("");
+					File csv = new File(path.getCanonicalPath() + "//Join.csv");
+					
+					BufferedReader br = new BufferedReader(new FileReader(csv));
+					String line = "";
+					
+					while((line = br.readLine()) != null) {
+						String[] tok = line.split(",");
+						
+						for(int i = 0; i < 3; i++) {
+							data2[row][i] = tok[i];
+						}
+						row++;
+					}
+					
+					br.close();
+				} catch (FileNotFoundException ex1) {
+					ex1.printStackTrace();
+				} catch (IOException ex2) {
+					ex2.printStackTrace();
+				}
+				
+				for(int i = 0; i < 100; i++) {
+					if(textField.getText().equals(data2[i][0])) {
+						if(passwordField.getText().equals(data2[i][1])) {
+							Stage_GUI gui = new Stage_GUI();
+							gui.stage(textField.getText());
+							
+							frame2.dispose();
+						}
+					}
+				}
+				
+				if(frame2.isShowing() == true) {
+					JOptionPane.showMessageDialog(null, "Your Account or Password is wrong.");
+				}
 			}
 		});
 		
@@ -180,17 +219,14 @@ public class Main extends JFrame implements ActionListener{
 			public void actionPerformed(ActionEvent aw) {
 				char tk = ',';
 				String[][] data = new String[100][3];
-				Main ji = new Main();
 				
-				ji.setId(textField.getText());
-				ji.setPassword(passwordField.getText());
-				System.out.println(textField.getText());
-				System.out.println(passwordField.getPassword());
+				setId(textField.getText());
+				setPassword(passwordField.getText());
+				
 				int row = 0;
-				int row2 = 0;
 				int i = 0;
 				
-				int res = JOptionPane.showConfirmDialog(null, "Your Id: " +ji.getId()+ "\nYour Password: " +ji.getPassword()+ "\nIf it is Correct, Press Yes.", "Verify", JOptionPane.YES_NO_OPTION);
+				int res = JOptionPane.showConfirmDialog(null, "Your Id: " +getId()+ "\nYour Password: " +getPassword()+ "\nIf it is Correct, Press Yes.", "Verify", JOptionPane.YES_NO_OPTION);
 				
 				if(res == JOptionPane.YES_OPTION)
 				{
@@ -203,16 +239,16 @@ public class Main extends JFrame implements ActionListener{
 						BufferedReader br = new BufferedReader(reader);
 						String line;
 						
-						
 						while((line = br.readLine()) != null) {
 							String[] token1 = line.split(",", -1);
 							
 							for(i = 0; i < 3; i++) {
 								data[row][i] = token1[i];
 								
-								if(ji.id.equals(data[row][0])) {
+								if(id.equals(data[row][0])) {
 									JOptionPane.showMessageDialog(null, "Your ID is already in USE!! try different id.");
 									br.close();
+									return;
 								}
 							}
 							row++;
@@ -221,8 +257,8 @@ public class Main extends JFrame implements ActionListener{
 						
 						br.close();
 						
-						data[row][0] = ji.getId();
-						data[row][1] = ji.getPassword();
+						data[row][0] = getId();
+						data[row][1] = getPassword();
 						data[row][2] = "0";
 						
 						FileWriter writer = new FileWriter(file);
@@ -237,8 +273,7 @@ public class Main extends JFrame implements ActionListener{
 					}
 					JOptionPane.showMessageDialog(null, "Your ID is now written. Please login again.");
 					
-					Main ma = new Main();
-					ma.main(null);
+
 				}
 				
 				else {
