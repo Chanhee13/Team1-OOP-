@@ -27,7 +27,8 @@ public class gameManager {
 	static private Assignment recentAssignment;
 	
 	
-	
+	///////
+	int a =3;
 	public static Assignment getRecentAssignment() {
 		return recentAssignment;
 	}
