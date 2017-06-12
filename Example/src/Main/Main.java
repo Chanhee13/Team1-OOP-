@@ -169,9 +169,8 @@ public class Main extends JFrame implements ActionListener{
 		
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
-				Main ja = new Main();
-				ja.setId(textField.getText());
-				ja.setPassword(passwordField.getText());
+				setId(textField.getText());
+				setPassword(passwordField.getText());
 				String[][] data2 = new String[100][3];
 				int row = 0;
 				
