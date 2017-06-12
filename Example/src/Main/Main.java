@@ -171,6 +171,13 @@ public class Main extends JFrame implements ActionListener{
 			public void actionPerformed(ActionEvent ae) {
 				setId(textField.getText());
 				setPassword(passwordField.getText());
+				
+				if(textField.getText().length() <= 2 || passwordField.getText().length() <= 2) {
+					JOptionPane.showMessageDialog(null, "Your ID and Password is too short!!\n Please write it again.");
+					textField.setText("");
+					passwordField.setText("");
+					return;
+				}
 				String[][] data2 = new String[100][3];
 				int row = 0;
 				
@@ -224,8 +231,9 @@ public class Main extends JFrame implements ActionListener{
 				
 				int row = 0;
 				int i = 0;
+				int t = 0;
 				
-				int res = JOptionPane.showConfirmDialog(null, "Your Id: " +getId()+ "\nYour Password: " +getPassword()+ "\nIf it is Correct, Press Yes.", "Verify", JOptionPane.YES_NO_OPTION);
+				int res = JOptionPane.showConfirmDialog(null, "Your ID is:  " +getId()+ "\nYour Password is:  " +getPassword()+ "\nIf it is Correct, Press Yes.\n\n(Warning!!: If Your Id and Password is shorter than 3 letters, It will not read.)", "Verify", JOptionPane.YES_NO_OPTION);
 				
 				if(res == JOptionPane.YES_OPTION)
 				{
