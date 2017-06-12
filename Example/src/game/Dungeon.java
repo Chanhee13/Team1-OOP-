@@ -192,8 +192,7 @@ public class Dungeon extends JFrame {
 
    static void renderNextAs(){
 	   next = gameManager.nextAssignment(mons);
-	   gameManager.getRecentHero().setAlive(false);
-	
+	 
 	   System.out.println("------------------------Hero's HP----------------\n"+gameManager.getRecentHero().getHP());
 	   textArea.setText(next);
 	   System.out.println("post"+next);
