@@ -231,6 +231,7 @@ public class Main extends JFrame implements ActionListener{
 				
 				int row = 0;
 				int i = 0;
+				int t = 0;
 				
 				int res = JOptionPane.showConfirmDialog(null, "Your ID is:  " +getId()+ "\nYour Password is:  " +getPassword()+ "\nIf it is Correct, Press Yes.\n\n(Warning!!: If Your Id and Password is shorter than 3 letters, It will not read.)", "Verify", JOptionPane.YES_NO_OPTION);
 				
