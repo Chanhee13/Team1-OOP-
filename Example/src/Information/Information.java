@@ -21,7 +21,8 @@ public class Information implements Serializable {
    private static ArrayList<Assignment> assingments = new ArrayList<Assignment>();
    
    public Information(int stage){
-      String f = "stage"+stage+".txt";
+      String f = "stage"+(stage)+".txt";
+      
       try {
          File file = new File(f);
          FileReader read = new FileReader(file);
@@ -54,7 +55,7 @@ public class Information implements Serializable {
          
          int i;
           // Assignment Ãß°¡
-         for(i=0;i<tempStr.length;i++){
+         for(i=1;i<tempStr.length;i++){
         	 
         	 if(tempStr[i].equals("ox"))
         	 {
