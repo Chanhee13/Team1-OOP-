@@ -26,7 +26,7 @@ public class SelectMonster extends Monster{
 		}
 		else 
 			{Hero recentHero = null;
-			gameManager.getRecentHero().setHP(getHP() - 10);
+			gameManager.getRecentHero ().setHP(gameManager.getRecentHero ().getHP()-10);;
 			System.out.println("User's Solution is NOT Correct.");
 			return false;
 	}}

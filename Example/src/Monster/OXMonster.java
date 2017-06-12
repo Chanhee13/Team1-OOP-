@@ -26,9 +26,11 @@ public class OXMonster extends Monster{
 			return true;
 		}
 		else {
-			Hero recentHero = null;
-			gameManager.getRecentHero().setHP(getHP() - 10);
+			System.out.println("------------------------깎이기 전에 몇?----------------\n"+gameManager.getRecentHero().getHP());
+			gameManager.getRecentHero ().setHP(gameManager.getRecentHero ().getHP()-10);;
+			System.out.println("------------------------여기서는 몇?----------------\n"+gameManager.getRecentHero().getHP());
 			System.out.println("User's Solution is NOT Correct.");
+		
 			return false;
 		}
 
