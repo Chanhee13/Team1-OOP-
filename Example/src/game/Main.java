@@ -220,9 +220,9 @@ public class Main extends JFrame implements ActionListener{
 							
 							//유저 clear stage정보 저장
 							boolean[] cleared = new boolean[3];
-							cleared[0]=true;
-							cleared[1]=true;
-							cleared[2]=true;
+							cleared[0]=false;
+							cleared[1]=false;
+							cleared[2]=false;
 							
 							u.setCleared(cleared);
 							//유저 설정

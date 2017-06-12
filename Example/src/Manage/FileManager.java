@@ -81,7 +81,7 @@ public class FileManager {
 				TypeMonster ty = new TypeMonster();
 				Information info = new Information(stage);
 				ArrayList<Assignment> as = info.getAssingments();
-				for(int i=0; i<as.size(); i++){
+				for(int i=0; i<7; i++){
 					System.out.println(as.get(i));
 					if(as.get(i) instanceof OXAssignment){
 						ox.addAssignment(as.get(i));
