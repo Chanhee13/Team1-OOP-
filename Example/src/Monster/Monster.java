@@ -4,8 +4,6 @@ import Manage.gameManager;
 
 import java.util.*;
 
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 
 public abstract class Monster {
 	static int i =0;
@@ -15,6 +13,7 @@ public abstract class Monster {
 	private int deadCount=0;
 	private ArrayList<Assignment> assignments = new ArrayList<Assignment> ();
 	private int prbNum=0;
+	
 	
 	Monster(){
 		i++;

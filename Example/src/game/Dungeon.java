@@ -5,6 +5,7 @@ import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -45,7 +46,7 @@ public class Dungeon extends JFrame {
    private static Monster[] mons;
    private static String next;
    private Monster m;
-   JButton btnNewButton = new JButton("Answer\n check");
+   static JButton  btnNewButton = new JButton("Answer\n check");
    static Hero hero=new Hero();
 
    /**
@@ -53,7 +54,7 @@ public class Dungeon extends JFrame {
     */
    public static void main(String[] args) {
 	
-	   gameManager.setRecentHero(hero);
+	  gameManager.setRecentHero(hero);
       EventQueue.invokeLater(new Runnable() {
          public void run() {
             try {
@@ -191,7 +192,17 @@ public class Dungeon extends JFrame {
 
    static void renderNextAs(){
 	   next = gameManager.nextAssignment(mons);
+	   gameManager.getRecentHero().setAlive(false);
+	
+	   System.out.println("------------------------Hero's HP----------------\n"+gameManager.getRecentHero().getHP());
 	   textArea.setText(next);
 	   System.out.println("post"+next);
+	   
+	   
+	   
+	   if(!gameManager.getRecentHero().isAlive()){
+		   JOptionPane.showMessageDialog(null, "Hero's HP: "+gameManager.getRecentHero().getHP()+"\nHero is dead...\nGame Over.", "Hero is dead....", JOptionPane.INFORMATION_MESSAGE);
+		   btnNewButton.setEnabled(false);
+	   }
    }
 }

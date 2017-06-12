@@ -20,7 +20,7 @@ public class TypeMonster extends Monster {
 			System.out.println("User's Solution is Correct.");
 			return true;
 		} else {
-			gameManager.getRecentHero().setHP(getHP() - 10);
+			gameManager.getRecentHero ().setHP(gameManager.getRecentHero ().getHP()-10);;
 			System.out.println("User's Solution is NOT Correct.");
 			return false;
 
