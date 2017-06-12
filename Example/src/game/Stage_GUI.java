@@ -18,6 +18,7 @@ import Manage.MyTest;
 import Manage.gameManager;
 
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 
 public class Stage_GUI extends User implements ActionListener{
@@ -38,6 +39,7 @@ public class Stage_GUI extends User implements ActionListener{
 		frame.setSize(470, 300);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.setLayout(null);
+		
 		
 		
 		JLabel label = new JLabel("Welcome. " +name);
@@ -100,12 +102,12 @@ public class Stage_GUI extends User implements ActionListener{
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		   gameManager gamaManager=new gameManager();
+		gameManager gamaManager=new gameManager();
 		Object bt = e.getSource();
 		MyTest.main(null);
 		if(bt == Stage1)
 		{
-			Stage1.setBackground(Color.GRAY);
+			//Stage1.setBackground(Color.GRAY);
 			gameManager.setRecentStage(1);
 			Dungeon D1 = new Dungeon(frame);
 			frame.setVisible(false);
@@ -115,22 +117,33 @@ public class Stage_GUI extends User implements ActionListener{
 		
 		if(bt == Stage2)
 		{	
-			Stage2.setBackground(Color.GRAY);
-			gameManager.setRecentStage(2);
-			Dungeon D1 = new Dungeon(frame);
-			frame.setVisible(false);
+			//Stage2.setBackground(Color.GRAY);
+			if(gameManager.getRecnetUser().isCleared(1)){
+				gameManager.setRecentStage(2);
+				Dungeon D1 = new Dungeon(frame);
+				frame.setVisible(false);
+			}else{
+				JOptionPane.showMessageDialog(null, "To enter stage3, you must complete stage2.","Warning!", JOptionPane.INFORMATION_MESSAGE);
+			}
+			
 			//D1.main(null);
 			
 		}
 		
 		if(bt == Stage3)
 		{
-			Stage3.setBackground(Color.GRAY);
-			gameManager.setRecentStage(3);
-			Dungeon D1 = new Dungeon(frame);
-			frame.setVisible(false);
+			//Stage3.setBackground(Color.GRAY);
+			if(gameManager.getRecnetUser().isCleared(2)){
+				gameManager.setRecentStage(3);
+				Dungeon D1 = new Dungeon(frame);
+				frame.setVisible(false);
+			}else{
+				JOptionPane.showMessageDialog(null, "To enter stage2, you must complete stage1.","Warning!", JOptionPane.INFORMATION_MESSAGE);
+			}
 			//D1.main(null);
 		}
+		
+		
 		/*
 		if(bt == Stage4)
 		{
@@ -178,15 +191,13 @@ public class Stage_GUI extends User implements ActionListener{
 		}
 		*/
 //		Teaching.main(null);
+		
 	}
 	
 	private int StageNumber;
 	Monster[] monster = new Monster[24];
 
-	public void nextMonster()
-	{
-		
-	}
+
 
 	public int getStageNumber() {
 		return StageNumber;
@@ -195,6 +206,24 @@ public class Stage_GUI extends User implements ActionListener{
 	public void setStageNumber(int stageNumber) {
 		StageNumber = stageNumber;
 	}
+	
+	public void setVisible(boolean visibility){
+		this.changeStageblockColor();
+	}
+	
+	public void changeStageblockColor(){
+		boolean[] cleared = gameManager.getRecnetUser().getCleared();
+		if(cleared[0]){
+			Stage1.setBackground(Color.GRAY);
+		}
+		if(cleared[1]){
+			Stage2.setBackground(Color.GRAY);
+		}
+		if(cleared[2]){
+			Stage3.setBackground(Color.GRAY);
+		}
+	}
+	
 	
 	
 	public static void main(String[] args) {

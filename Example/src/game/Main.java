@@ -9,6 +9,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
+
+import Manage.gameManager;
+import User.User;
+
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.GroupLayout;
@@ -204,6 +208,26 @@ public class Main extends JFrame implements ActionListener{
 				for(int i = 0; i < 100; i++) {
 					if(textField.getText().equals(data2[i][0])) {
 						if(passwordField.getText().equals(data2[i][1])) {
+							
+							//유저 객체생성
+							User u = new User();
+							
+							//유저 아이디 저장
+							u.setID(data2[i][0]);
+							
+							//유저 clear stage정보 저장
+							boolean[] cleared = new boolean[3];
+							cleared[0]=false;
+							cleared[1]=false;
+							cleared[2]=false;
+							
+							u.setCleared(cleared);
+							//유저 설정
+							gameManager.setRecnetUser(u);
+							
+							
+							
+							//stage선택창으로 넘어감
 							Stage_GUI gui = new Stage_GUI();
 							gui.stage(textField.getText());
 							

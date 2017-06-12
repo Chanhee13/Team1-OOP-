@@ -7,7 +7,7 @@ public class User{
 	private String ID;
 
 	Hero hero;
-	private boolean[] cleared={true,true,false,false,false,false}; 
+	private boolean[] cleared={false,false,false}; 
 
 	
 	public String getID() {
@@ -40,6 +40,11 @@ public class User{
 
 	public void setHero(Hero hero) {
 		this.hero = hero;
+	}
+
+
+	public void setCleared(int recentStage, boolean b) {
+		this.cleared[recentStage-1] = b;
 	}
 	
 	

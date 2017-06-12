@@ -189,7 +189,6 @@ public class Dungeon extends JFrame {
 		@Override
 		public void windowClosing(WindowEvent e) {
 			parent.setVisible(true);
-			
 		}
 		
 	});

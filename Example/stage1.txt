@@ -11,7 +11,7 @@ such as yourDog,myDog,...
 
 
 &ox,Class is blueprint of an object,O,
-ox,If dog is a class Chihuahua is a object,O,
+ox,If Cat is a class Chihuahua can be a object,X,
 ox,Every Java program has at least one class with a main() method,O,
 se,What is state of objects?,method,instance variable,classes,function,
 se,Which of the following is not a primitive type?,String,int,double,boolean,

@@ -13,6 +13,7 @@ import Monster.SelectMonster;
 import Monster.TypeMonster;
 
 import User.Hero;
+import User.User;
 import game.*;
 
 public class gameManager {
@@ -25,8 +26,16 @@ public class gameManager {
 	static private String recentSelectSolution;
 	static private String recentTypeSolution;
 	static private Assignment recentAssignment;
+	static private User recnetUser;
 	
 	
+
+	public static User getRecnetUser() {
+		return recnetUser;
+	}
+	public static void setRecnetUser(User recnetUser) {
+		gameManager.recnetUser = recnetUser;
+	}
 	public static Assignment getRecentAssignment() {
 		return recentAssignment;
 	}
@@ -103,6 +112,8 @@ public class gameManager {
 				JOptionPane.showMessageDialog(null, "Hero's HP: "+gameManager.getRecentHero().getHP()+"\nHero is alive!\nCongratulations!\n"
 						+"Correct : "+gameManager.getRecentHero().getSolve()+"\nNOT Correct : "+gameManager.getRecentHero().getUnSolve(),
 						 "Congratulations!", JOptionPane.INFORMATION_MESSAGE);
+				System.out.println("지금 스테이지는 어디? "+ gameManager.getRecentStage());
+				gameManager.getRecnetUser().setCleared(gameManager.getRecentStage(),true);
 				return "End";
 			}
 		}
