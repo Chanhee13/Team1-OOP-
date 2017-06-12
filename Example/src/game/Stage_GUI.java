@@ -101,8 +101,7 @@ public class Stage_GUI extends User implements ActionListener{
 	
 	
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		gameManager gamaManager=new gameManager();
+	public void actionPerformed(ActionEvent e){ 
 		Object bt = e.getSource();
 		MyTest.main(null);
 		if(bt == Stage1)
