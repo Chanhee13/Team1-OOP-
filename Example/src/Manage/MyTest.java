@@ -30,15 +30,10 @@ public class MyTest {
 		User u = new User();
 		Hero h = new Hero();
 		h.setName("Jhon");
-		h.setGender(true);
+
 		u.setHero(h);
 		System.out.println("Name : "+u.getHero().getName());
-		if(u.getHero().isGender()==true)
-		{
-			System.out.println("Gender : Female");
-		}
-		else
-			System.out.println("Gender : Male");
+
 		
 		//------------------------------ Stage Pick Test
 		System.out.println("---------------Stage Pick TEST---------------");

@@ -90,7 +90,6 @@ public class gameManager {
 			System.out.println(list.get(i).getProblem());
 		}
 		if(gameManager.getRecentMonster().getAssignment().size()<=gameManager.getRecentProblem()){
-			System.out.println("여기 들어왔다");
 			gameManager.setRecentProblem(0);
 			System.out.println(gameManager.getRecentMonster());
 			if(gameManager.getRecentMonster() instanceof OXMonster){
@@ -102,7 +101,10 @@ public class gameManager {
 			}
 			else if(gameManager.getRecentMonster() instanceof TypeMonster)
 			{
-				JOptionPane.showMessageDialog(new JFrame(), "Good");
+				JOptionPane.showMessageDialog(null, "Hero's HP: "+gameManager.getRecentHero().getHP()+"\nHero is alive!\nCongratulations!\n"
+						+"Correct : "+gameManager.getRecentHero().getSolve()+"\nNOT Correct : "+gameManager.getRecentHero().getUnSolve(),
+						 "Congratulations!", JOptionPane.INFORMATION_MESSAGE);
+				return "End";
 			}
 		}
 		return gameManager.getRecentMonster().askProblem();

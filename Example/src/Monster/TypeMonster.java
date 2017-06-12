@@ -16,10 +16,12 @@ public class TypeMonster extends Monster {
 		//정답확인
 		System.out.println("Solution: "+sol); //왜 솔루션이 null이지? 
 		if (userAnswer.equals(sol)) {
+			gameManager.getRecentHero().setSolve(gameManager.getRecentHero().getSolve()+1);
 			this.setHP(this.getHP() - 10);
 			System.out.println("User's Solution is Correct.");
 			return true;
 		} else {
+			gameManager.getRecentHero().setUnSolve(gameManager.getRecentHero().getUnSolve()+1);
 			gameManager.getRecentHero ().setHP(gameManager.getRecentHero ().getHP()-10);;
 			System.out.println("User's Solution is NOT Correct.");
 			return false;

@@ -50,37 +50,20 @@ public class Dungeon extends JFrame {
    private static String next;
    private Monster m;
    static JButton  btnNewButton = new JButton("Answer\n check");
-   static Hero hero=new Hero();
+   static Hero hero;
+
    
    JFrame parent;
 
-   /**
-    * Launch the application.
-    */
-
-//   public static void main(String[] args) {
-//	
-//	   gameManager.setRecentHero(hero);
-//      EventQueue.invokeLater(new Runnable() {
-//         public void run() {
-//            try {
-//               Dungeon frame = new Dungeon();
-//              
-//            } catch (Exception e) {
-//               e.printStackTrace();
-//            }
-//         }
-//      });
-//   }
-
-   /**
-    * Create the frame.
-    */
    public Dungeon(JFrame parent) {
-	   this.parent = parent;
-	   this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+	  hero=new Hero();
+	  gameManager.setRecentHero(hero);
+	  btnNewButton.setEnabled(true);
+	   
+	  this.parent = parent;
+	  this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
        
-       this.setVisible(true);
+      this.setVisible(true);
       setTitle("Fight!");
       setBackground(Color.PINK);
 //      setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -209,22 +192,25 @@ public class Dungeon extends JFrame {
 			
 		}
 		
-	
-		
 	});
       
    }
  static void renderNextAs(){
 	   next = gameManager.nextAssignment(mons);
-	 
+	   
 	   System.out.println("------------------------Hero's HP----------------\n"+gameManager.getRecentHero().getHP());
 	   textArea.setText(next);
 	   System.out.println("post"+next);
 	   
 	   
-	   
+	   //If user is dead, show the message "Game Over" to Hero.
 	   if(!gameManager.getRecentHero().isAlive()){
 		   JOptionPane.showMessageDialog(null, "Hero's HP: "+gameManager.getRecentHero().getHP()+"\nHero is dead...\nGame Over.", "Hero is dead....", JOptionPane.INFORMATION_MESSAGE);
+		   btnNewButton.setEnabled(false);
+	   }
+	   
+	   //모든 문제 다 풀면 스테이지 종료.
+	   if(next.equals("End")){
 		   btnNewButton.setEnabled(false);
 	   }
    }

@@ -21,11 +21,12 @@ public class SelectMonster extends Monster{
 		
 		if(userAnswer == sol) {
 			this.setHP(this.getHP()-10);
+			gameManager.getRecentHero().setSolve(gameManager.getRecentHero().getSolve()+1);
 			System.out.println("User's Solution is Correct.");
 			return true;
 		}
-		else 
-			{Hero recentHero = null;
+		else{
+			gameManager.getRecentHero().setUnSolve(gameManager.getRecentHero().getUnSolve()+1);
 			gameManager.getRecentHero ().setHP(gameManager.getRecentHero ().getHP()-10);;
 			System.out.println("User's Solution is NOT Correct.");
 			return false;
