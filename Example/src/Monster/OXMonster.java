@@ -25,6 +25,7 @@ public class OXMonster extends Monster{
 			this.setHP(this.getHP()-10);
 			gameManager.getRecentHero().setSolve(gameManager.getRecentHero().getSolve()+1);
 			System.out.println("User's Solution is Correct.");
+			this.popUp(true);
 			return true;
 		}
 		else {
@@ -33,7 +34,7 @@ public class OXMonster extends Monster{
 			gameManager.getRecentHero ().setHP(gameManager.getRecentHero ().getHP()-10);;
 			System.out.println("------------------------여기서는 몇?----------------\n"+gameManager.getRecentHero().getHP());
 			System.out.println("User's Solution is NOT Correct.");
-		
+			this.popUp(false);
 			return false;
 		}
 

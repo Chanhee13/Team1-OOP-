@@ -105,7 +105,7 @@ public class Dungeon extends JFrame {
 		as = info.getAssingments();
 		System.out.println(as.size());
 		System.out.println("----------------------------------------------------");
-		for (int i = 0; i < as.size(); i++) {
+		for (int i = 0; i < as.size()/2; i++) {
 			System.out.println();
 			System.out.println(as.get(i).getProblem());
 			if (as.get(i) instanceof OXAssignment) {

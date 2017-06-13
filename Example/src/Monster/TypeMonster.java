@@ -19,11 +19,13 @@ public class TypeMonster extends Monster {
 			gameManager.getRecentHero().setSolve(gameManager.getRecentHero().getSolve()+1);
 			this.setHP(this.getHP() - 10);
 			System.out.println("User's Solution is Correct.");
+			this.popUp(true);
 			return true;
 		} else {
 			gameManager.getRecentHero().setUnSolve(gameManager.getRecentHero().getUnSolve()+1);
 			gameManager.getRecentHero ().setHP(gameManager.getRecentHero ().getHP()-10);;
 			System.out.println("User's Solution is NOT Correct.");
+			this.popUp(false);
 			return false;
 
 		}

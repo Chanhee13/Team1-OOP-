@@ -4,6 +4,8 @@ import Manage.gameManager;
 
 import java.util.*;
 
+import javax.swing.JOptionPane;
+
 
 public abstract class Monster {
 	static int i =0;
@@ -87,6 +89,14 @@ public abstract class Monster {
 
 	public void setPrbNum(int prbNum) {
 		this.prbNum = prbNum;
+	}
+	
+	public void popUp(boolean correctness){
+		if(correctness){
+			JOptionPane.showMessageDialog(null,"Correct","Result",JOptionPane.INFORMATION_MESSAGE);
+		}else{
+			JOptionPane.showMessageDialog(null,"NOT Correct","Result",JOptionPane.INFORMATION_MESSAGE);
+		}
 	}
 	
 }

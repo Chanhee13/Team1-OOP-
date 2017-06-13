@@ -109,11 +109,17 @@ public class gameManager {
 			}
 			else if(gameManager.getRecentMonster() instanceof TypeMonster)
 			{
-				JOptionPane.showMessageDialog(null, "Hero's HP: "+gameManager.getRecentHero().getHP()+"\nHero is alive!\nCongratulations!\n"
-						+"Correct : "+gameManager.getRecentHero().getSolve()+"\nNOT Correct : "+gameManager.getRecentHero().getUnSolve(),
-						 "Congratulations!", JOptionPane.INFORMATION_MESSAGE);
-				System.out.println("지금 스테이지는 어디? "+ gameManager.getRecentStage());
-				gameManager.getRecnetUser().setCleared(gameManager.getRecentStage(),true);
+				if(gameManager.getRecentHero().isAlive()){
+					JOptionPane.showMessageDialog(null, "Hero's HP: "+gameManager.getRecentHero().getHP()+"\nHero is alive!\nCongratulations!\n"
+							+"Correct : "+gameManager.getRecentHero().getSolve()+"\nNOT Correct : "+gameManager.getRecentHero().getUnSolve(),
+							 "Congratulations!", JOptionPane.INFORMATION_MESSAGE);
+					gameManager.getRecnetUser().setCleared(gameManager.getRecentStage(), true);
+					System.out.println("지금 스테이지는 어디? "+ gameManager.getRecentStage());
+					System.out.println(gameManager.getRecnetUser().isCleared(1));
+					gameManager.getRecnetUser().setCleared(gameManager.getRecentStage(),true);
+					System.out.println(gameManager.getRecnetUser().getCleared());
+				}
+				
 				return "End";
 			}
 		}

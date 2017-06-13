@@ -26,7 +26,7 @@ public class User{
 	}
 	
 	public boolean isCleared(int stage){
-		return cleared[stage];
+		return cleared[stage-1];
 	}
 
 
