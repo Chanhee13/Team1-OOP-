@@ -54,7 +54,7 @@ public class SelectCheckBox extends JFrame implements ActionListener{
 	 * Create the frame.
 	 */
 	public SelectCheckBox() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setTitle("SelectCheckBox");
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();

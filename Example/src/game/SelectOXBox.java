@@ -45,7 +45,7 @@ public class SelectOXBox extends JFrame implements ActionListener {
 	 * Create the frame.
 	 */
 	public SelectOXBox() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setTitle("SelectOXBox");
 		setBounds(100, 100, 304, 192);
 		contentPane = new JPanel();
@@ -58,7 +58,7 @@ public class SelectOXBox extends JFrame implements ActionListener {
 		buttonGroup.add(rdbtnFalse);
 		
 		
-		btnOk.addActionListener(this);
+			btnOk.addActionListener(this);
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -111,6 +111,7 @@ public class SelectOXBox extends JFrame implements ActionListener {
 			Dungeon.renderNextAs();
 			this.dispose();;
 		}
+		
 		
 	}
 	

@@ -91,7 +91,7 @@ public class gameManager {
 		
 		gameManager.setRecentProblem(gameManager.getRecentProblem()+1);
 		
-		ArrayList<Assignment> list = gameManager.getRecentMonster().getAssignment();
+		 ArrayList<Assignment> list = gameManager.getRecentMonster().getAssignment();
 		System.out.println("¼ıÀÚ : "+gameManager.getRecentProblem());
 		for(int i=0;i<list.size();i++)
 		{

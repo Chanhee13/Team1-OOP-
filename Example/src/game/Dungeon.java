@@ -136,9 +136,13 @@ public class Dungeon extends JFrame {
 
 				m = gameManager.getRecentMonster();
 
+				
+				
 				if (m instanceof SelectMonster) {
 					SelectCheckBox.main(null);
 
+					
+					
 				} else if (m instanceof OXMonster) {
 					SelectOXBox.main(null);
 
@@ -146,9 +150,19 @@ public class Dungeon extends JFrame {
 					SelectTypeBox.main(null);
 
 				}
+				else {
+					
+					
+				}
 			}
-
-		});
+			
+			
+			
+			
+		}
+		
+				
+				);
 
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane
