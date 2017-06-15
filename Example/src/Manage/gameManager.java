@@ -125,6 +125,8 @@ public class gameManager {
 					System.out.println("지금 스테이지는 어디? "+ gameManager.getRecentStage());
 					System.out.println(gameManager.getRecnetUser().isCleared(1));
 					gameManager.getRecnetUser().setCleared(gameManager.getRecentStage(),true);
+					gameManager.getRecnetUser().setLastCleard(gameManager.getRecentStage());
+					
 					System.out.println(gameManager.getRecnetUser().getCleared());
 				}
 				gameManager.setRecentDungeon(null);

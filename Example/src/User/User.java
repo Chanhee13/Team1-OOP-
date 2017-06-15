@@ -5,11 +5,23 @@ import game.Stage_GUI;
 public class User{
 	
 	private String ID;
-
+	
 	Hero hero;
 	private boolean[] cleared={false,false,false}; 
-
+	private int lastCleard = 0;
 	
+	
+	
+	public int getLastCleard() {
+		return lastCleard;
+	}
+
+
+	public void setLastCleard(int lastCleard) {
+		this.lastCleard = lastCleard;
+	}
+
+
 	public String getID() {
 		return ID;
 	}

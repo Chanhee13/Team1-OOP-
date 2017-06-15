@@ -222,6 +222,7 @@ public class Main extends JFrame implements ActionListener{
 							//유저 아이디 저장
 							u.setID(data2[i][0]);
 							
+							
 							//유저 clear stage정보 저장
 							boolean[] cleared = new boolean[3];
 							cleared[0]=false;
