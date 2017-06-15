@@ -43,55 +43,48 @@ public class Main extends JFrame implements ActionListener{
 	public JButton btnSignUp = new JButton("Sign UP");
 	private JPasswordField passwordField;
 	
-	private static Main frame2 = new Main();
 	private JButton btnCancel;
 	private JButton btnReset;
 	
-	private static String id;
-	private static String password;
-	
-	
+	private String id;
+	private String password;
 
-	public static String getId() {
+	public String getId() {
 		return id;
 	}
 
-	public static void setId(String id) {
-		if(id != null) Main.id = id;
+	public void setId(String id) {
+		if(id != null) this.id = id;
 	}
 
-	public static String getPassword() {
+	public String getPassword() {
 		return password;
 	}
 
-	public static void setPassword(String password) {
-		if(password != null) Main.password = password;
+	public void setPassword(String password) {
+		if(id != null) this.password = password;
 	}
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					
-					frame2.setVisible(true);
-					frame2.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-					frame2.setResizable(false);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+		Main ma = new Main();
+		ma.main();
 	}
 
 	/**
 	 * Create the frame.
+	 * @return 
 	 */
-	@SuppressWarnings({ "static-access", "deprecation" })
-	public Main() {
-		setTitle("Java Program Game");
+	@SuppressWarnings({"deprecation" })
+	public void main() {
+		JFrame frame2 = new JFrame();
+		frame2.setTitle("Java Program game");
+		frame2.setVisible(true);
+		frame2.setBounds(100, 100, 450, 450);
+		
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 450);
 		contentPane = new JPanel();
@@ -103,6 +96,7 @@ public class Main extends JFrame implements ActionListener{
 		contentPane.add(panel, BorderLayout.CENTER);
 		TitledBorder border = BorderFactory.createTitledBorder("Please Login to start a game.");
 		((JComponent) panel).setBorder(border);
+		frame2.setResizable(false);
 		
 		JLabel lblNewLabel = new JLabel("User ID: ");
 		lblNewLabel.setFont(new Font("±¼¸²", Font.PLAIN, 14));
@@ -122,6 +116,16 @@ public class Main extends JFrame implements ActionListener{
 		btnCancel = new JButton("Close");
 		
 		btnReset = new JButton("Reset");
+		panel.add(lblNewLabel);
+		panel.add(lblPassword);
+		panel.add(textField);
+		panel.add(passwordField);
+		panel.add(btnNewButton);
+		panel.add(btnCancel);
+		panel.add(btnReset);
+		
+		frame2.add(panel);
+		
 		GroupLayout gl_panel = new GroupLayout(panel);
 		gl_panel.setHorizontalGroup(
 			gl_panel.createParallelGroup(Alignment.TRAILING)
@@ -266,7 +270,6 @@ public class Main extends JFrame implements ActionListener{
 				
 				int row = 0;
 				int i = 0;
-				int t = 0;
 				
 				int res = JOptionPane.showConfirmDialog(null, "Your ID is:  " +getId()+ "\nYour Password is:  " +getPassword()+ "\nIf it is Correct, Press Yes.\n\n(Warning!!: If Your Id and Password is shorter than 3 letters, It will not read.)", "Verify", JOptionPane.YES_NO_OPTION);
 				

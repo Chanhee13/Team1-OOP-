@@ -1,0 +1,19 @@
+2
+&d 
+Declaring a class abstract means you cannot create objects from it.
+¡Ü Creating an abstract class is easy: just add the word "abstract" to
+class declaration.
+Example 1: abstract class Animal {...}
+Example 2: abstract class Canine extends Animal {...}
+¡Ü When you design an inheritance hierarchy, you have to decide which
+classes are abstract and which ones are concrete.
+¡Ü Concrete class = classes that we have created so far.
+¡ÜEvery Java class is a subclass of a class called Object
+
+&ox,A class that is not abstract is concrete,O,
+ox,You can't mix both abstract and concrete methods in an abstract class,X,
+ox,An abstract method must be overridden in the subclass,O,
+se,What is Every Java class is a subclass of a class?,Object,Interface,Superclass,function,
+se,Which of the following is the thing that gives you back the class that object was instantiated from?,getClass( ),hashCode( ),toString( ),equals(Object o),
+ty,A class that is not abstract is (         ),concrete,
+ty,(	) class means you cannot create objects from it ,abstract
