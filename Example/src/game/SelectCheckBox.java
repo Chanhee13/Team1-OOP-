@@ -27,17 +27,17 @@ public class SelectCheckBox extends JFrame implements ActionListener{
 	private JPanel contentPane;
 	private JButton btnOk;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
-	JRadioButton rdbbtn1;
-	JRadioButton rdbbtn2;
-	JRadioButton rdbbtn3;
-	JRadioButton rdbbtn4;
+	private JRadioButton rdbbtn1;
+	private JRadioButton rdbbtn2;
+	private JRadioButton rdbbtn3;
+	private JRadioButton rdbbtn4;
 	String sol="";
 	String[] wor = {"","",""};
-
+	private JFrame parent;
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -49,11 +49,16 @@ public class SelectCheckBox extends JFrame implements ActionListener{
 			}
 		});
 	}
-
+*/
 	/**
 	 * Create the frame.
 	 */
-	public SelectCheckBox() {
+	public SelectCheckBox(JFrame parent) {
+		this.parent = parent;
+		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		
+		this.setVisible(true);
+		
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setTitle("SelectCheckBox");
 		setBounds(100, 100, 450, 300);
@@ -154,9 +159,9 @@ public class SelectCheckBox extends JFrame implements ActionListener{
 		}
 		else
 			System.out.println("Your answer is NOT right!");
-		
+
 		if(bt.equals(btnOk)){
-			Dungeon.renderNextAs();
+			gameManager.getRecentDungeon().renderNextAs();
 			this.dispose();;
 		}
 	}

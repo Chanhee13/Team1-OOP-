@@ -24,11 +24,12 @@ public class SelectOXBox extends JFrame implements ActionListener {
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private JRadioButton rdbtnTrue;
 	private JRadioButton rdbtnFalse;
-	JButton btnOk = new JButton("OK"); //액션리스너 기능 추가행함
+	private JButton btnOk = new JButton("OK"); //액션리스너 기능 추가행함
+	private JFrame parent;
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -39,12 +40,17 @@ public class SelectOXBox extends JFrame implements ActionListener {
 				}
 			}
 		});
-	}
+	}*/
 
 	/**
 	 * Create the frame.
 	 */
-	public SelectOXBox() {
+	public SelectOXBox(JFrame parent) {
+		
+		this.parent = parent;
+		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		this.setVisible(true);
+		
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setTitle("SelectOXBox");
 		setBounds(100, 100, 304, 192);
@@ -106,9 +112,9 @@ public class SelectOXBox extends JFrame implements ActionListener {
 		else
 			System.out.println("Not Answer!");
 		
-		
+
 		if(bt.equals(btnOk)){
-			Dungeon.renderNextAs();
+			gameManager.getRecentDungeon().renderNextAs();
 			this.dispose();;
 		}
 		

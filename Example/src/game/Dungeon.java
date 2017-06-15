@@ -49,7 +49,7 @@ public class Dungeon extends JFrame {
 	private static Monster[] mons;
 	private static String next;
 	private Monster m;
-	static JButton btnNewButton = new JButton("Answer\n check");
+	JButton btnNewButton = new JButton("Answer\n check");
 	static Hero hero;
 
 	JFrame parent;
@@ -126,7 +126,9 @@ public class Dungeon extends JFrame {
 		mons[0] = ox;
 		mons[1] = se;
 		mons[2] = ty;
-
+		System.out.println("--------------------------------------");
+		System.out.println("버튼은 무엇인가? : "+btnNewButton.getComponentCount());
+		System.out.println("--------------------------------------");
 		gameManager.setRecentMonster(mons[0]);
 		m = gameManager.getRecentMonster();
 		textArea.setText(m.askProblem());
@@ -135,34 +137,19 @@ public class Dungeon extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 
 				m = gameManager.getRecentMonster();
-
-				
 				
 				if (m instanceof SelectMonster) {
-					SelectCheckBox.main(null);
-
-					
+					SelectCheckBox a = new SelectCheckBox(new JFrame());
 					
 				} else if (m instanceof OXMonster) {
-					SelectOXBox.main(null);
+					SelectOXBox o = new SelectOXBox(new JFrame());
+
 
 				} else if (m instanceof TypeMonster) {
-					SelectTypeBox.main(null);
-
+					SelectTypeBox t = new SelectTypeBox(new JFrame());
 				}
-				else {
-					
-					
-				}
-			}
-			
-			
-			
-			
-		}
-		
-				
-				);
+			}		
+		});
 
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane
@@ -186,7 +173,6 @@ public class Dungeon extends JFrame {
 
 		// show teaching frame
 		Teaching t = new Teaching();
-
 		this.addWindowListener(new WindowAdapter() {
 
 			@Override
@@ -199,9 +185,10 @@ public class Dungeon extends JFrame {
 
 	}
 
-	static void renderNextAs() {
-		next = gameManager.nextAssignment(mons);
 
+public void renderNextAs() {
+		next = gameManager.nextAssignment(mons);
+		JButton jbt = this.btnNewButton;
 		System.out.println("------------------------Hero's HP----------------\n" + gameManager.getRecentHero().getHP());
 		textArea.setText(next);
 		System.out.println("post" + next);
@@ -211,12 +198,12 @@ public class Dungeon extends JFrame {
 			JOptionPane.showMessageDialog(null,
 					"Hero's HP: " + gameManager.getRecentHero().getHP() + "\nHero is dead...\nGame Over.",
 					"Hero is dead....", JOptionPane.INFORMATION_MESSAGE);
-			btnNewButton.setEnabled(false);
+			jbt.setEnabled(false);
 		}
 
 		// 모든 문제 다 풀면 스테이지 종료.
 		if (next.equals("End")) {
-			btnNewButton.setEnabled(false);
+			jbt.setEnabled(false);
 		}
 	}
 }

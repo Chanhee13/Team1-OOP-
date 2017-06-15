@@ -19,7 +19,7 @@ import User.User;
 
 public class FileManager {
 
-	private File[] file = new File[3];
+	private File[] file = new File[4];
 	private User user = new User();
 	private ArrayList<File> f = new ArrayList<File>();
 
@@ -56,7 +56,7 @@ public class FileManager {
 				TypeMonster ty = new TypeMonster();
 				Information info = new Information(stage);
 				ArrayList<Assignment> as = info.getAssingments();
-				for(int i=0; i<7; i++){
+				for(int i=0; i<as.size()/2; i++){
 					System.out.println(as.get(i));
 					if(as.get(i) instanceof OXAssignment){
 						ox.addAssignment(as.get(i));

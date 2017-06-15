@@ -107,6 +107,7 @@ public class Stage_GUI extends User implements ActionListener{
 			System.out.println("===================지금 스테이지는====================");
 			System.out.println("++++++++"+gameManager.getRecentStage()+"+++++++++++++");
 			Dungeon D1 = new Dungeon(frame);
+			gameManager.setRecentDungeon(D1);
 			frame.setVisible(false);
 			//D1.main(null);
 			
@@ -120,6 +121,7 @@ public class Stage_GUI extends User implements ActionListener{
 				System.out.println("===================지금 스테이지는====================");
 				System.out.println("++++++++"+gameManager.getRecentStage()+"+++++++++++++");
 				Dungeon D1 = new Dungeon(frame);
+				gameManager.setRecentDungeon(D1);
 				frame.setVisible(false);
 			}else{
 				JOptionPane.showMessageDialog(null, "To enter stage2, you must complete stage1.","Warning!", JOptionPane.INFORMATION_MESSAGE);
@@ -137,6 +139,7 @@ public class Stage_GUI extends User implements ActionListener{
 				System.out.println("===================지금 스테이지는====================");
 				System.out.println("++++++++"+gameManager.getRecentStage()+"+++++++++++++");
 				Dungeon D1 = new Dungeon(frame);
+				gameManager.setRecentDungeon(D1);
 				frame.setVisible(false);
 			}else{
 				JOptionPane.showMessageDialog(null, "To enter stage3, you must complete stage2.","Warning!", JOptionPane.INFORMATION_MESSAGE);

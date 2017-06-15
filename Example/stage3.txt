@@ -1,23 +1,22 @@
 3
-&What is Object and Class?
+&What is Super Class?
+In the relationship between two objects,
+a Superclass is the name given to the class that being inherited from.
+additionally, a subclass inherits the instance variables 
+and member function of its superclass.
 
-Class is blueprint of an object. 
+Example: if Animal class has four methods :
+sleep(), roam(), MakeNoise() and eat(),
+and Wolf class extends Animal class.
+then, Wolf class can inherited methods from Animal class.
 
-Class defines instance variables(state) 
-and methods(behavior).
+this relationship is called inheritance.
 
-Example: class ¡°Dog¡± has variables size, 
-breed and name, and a method bark().
 
-Object is an instance(realization) of the class.
-
-Many objects of the same class can exist, 
-such as yourDog,myDog,...
-
-&ox,Class is blueprint of an object,O.
-ox,If dog is a class, Chihuahua is a object,O.
-ox,Every Java program has at least one class with a main() method,O.
-se,What is state of objects?,instance variable,method,classes,function.
-se,Which of the following is not a primitive type?,String,int,double,boolean.
-ty,class is a (	) of an object,blueprint.
-ty,(	) is a realization of the Class,object.
+&ox,Subclass can uses Superclass's method,O,
+ox,If Subclass extends Superclass and Some class extends Subclass then Some class can't uses the Superclass's methods,X,
+ox,Tiger class extends Feline class, then this relationship is Is-A test,O,
+se,If Hero class has Method(superPower()) and SmileMan extends Hero. What is SmileMan can uses Method?,superPower(),fly(),laugh(),punch(),
+se,What is not Is-A test?,Bathhub-Bathroom,Cat-Feline,Triangle-Shape,Surgeon-doctor,
+ty,if Some Class inherited from other class then other class is called (      ).,
+ty,Is-A relationship is (        ).

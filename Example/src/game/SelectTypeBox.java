@@ -21,11 +21,12 @@ public class SelectTypeBox extends JFrame implements ActionListener{
 	private JPanel contentPane;
 	private JButton btnOk;
 	private JTextField textField;
+	private JFrame parent;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -36,12 +37,16 @@ public class SelectTypeBox extends JFrame implements ActionListener{
 				}
 			}
 		});
-	}
+	}*/
 
 	/**
 	 * Create the frame.
 	 */
-	public SelectTypeBox() {
+	public SelectTypeBox(JFrame parent) {
+		this.parent = parent;
+		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		this.setVisible(true);
+		
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setTitle("SelectTypeBox");
 		setBounds(100, 100, 450, 300);
@@ -87,10 +92,11 @@ public class SelectTypeBox extends JFrame implements ActionListener{
 		System.out.println("User Answer: "+textField.getText().toLowerCase());
 		gameManager.getRecentMonster().isCorrect(gameManager.getRecentTypeSolution());
 		
+
 		
 		if(e.getSource()==btnOk)
 		{
-			Dungeon.renderNextAs();
+			gameManager.getRecentDungeon().renderNextAs();
 			this.dispose();
 		}
 		

@@ -102,16 +102,17 @@ public class Information implements Serializable {
 
 	// assingment에 값을 넣거나 빼고, 조회할 때는 ArrayList의 method인 add, remove를 쓰도록 한다.
 	// 하지만 다른 클래스에서 assingment 전체의 정보를 얻어오고 싶은 경우에는 getAssingment를 사용한다.
-	public ArrayList<Assignment> getAssingments() {
-		return assingments;
-	}
-
-	public void setAssingments(ArrayList<Assignment> assingments) {
-		this.assingments = assingments;
-	}
 
 	public void setNumberofAs(int numberofAs) {
 		this.numberofAs = numberofAs;
+	}
+
+	public static ArrayList<Assignment> getAssingments() {
+		return assingments;
+	}
+
+	public static void setAssingments(ArrayList<Assignment> assingments) {
+		Information.assingments = assingments;
 	}
 
 	public int getNumberofAs() {

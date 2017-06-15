@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import Information.Assignment;
+import Information.*;
 import Monster.Monster;
 
 import Monster.OXMonster;
@@ -27,6 +27,7 @@ public class gameManager {
 	static private String recentTypeSolution;
 	static private Assignment recentAssignment;
 	static private User recnetUser;
+	static private Dungeon recentDungeon;
 	
 	
 
@@ -86,6 +87,13 @@ public class gameManager {
 	}
 
 	
+	
+	public static Dungeon getRecentDungeon() {
+		return recentDungeon;
+	}
+	public static void setRecentDungeon(Dungeon recentDungeon) {
+		gameManager.recentDungeon = recentDungeon;
+	}
 	public static String nextAssignment(Monster[] mons){
 		
 		
@@ -119,7 +127,8 @@ public class gameManager {
 					gameManager.getRecnetUser().setCleared(gameManager.getRecentStage(),true);
 					System.out.println(gameManager.getRecnetUser().getCleared());
 				}
-				
+				gameManager.setRecentDungeon(null);
+				Information.getAssingments().clear();
 				return "End";
 			}
 		}
